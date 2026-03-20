@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,20 @@
 		B10000000000000000000004 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000004 /* WebView.swift */; };
 		B10000000000000000000005 /* GamePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000005 /* GamePlayerView.swift */; };
 		B10000000000000000000006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000006 /* Assets.xcassets */; };
+		B10000000000000000000007 /* GamePrefetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000008 /* GamePrefetchManager.swift */; };
+		B10000000000000000000010 /* CompletionScripts in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000010 /* CompletionScripts */; };
+		B10000000000000000000020 /* CompletionScriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000020 /* CompletionScriptTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		G10000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1665E46DB17400F6B164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E10000000000000000000001;
+			remoteInfo = DailyGames;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A10000000000000000000001 /* DailyGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamesApp.swift; sourceTree = "<group>"; };
@@ -23,10 +36,94 @@
 		A10000000000000000000005 /* GamePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayerView.swift; sourceTree = "<group>"; };
 		A10000000000000000000006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10000000000000000000007 /* DailyGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000008 /* GamePrefetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePrefetchManager.swift; sourceTree = "<group>"; };
+		A10000000000000000000010 /* CompletionScripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CompletionScripts; sourceTree = "<group>"; };
+		A10000000000000000000020 /* CompletionScriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionScriptTests.swift; sourceTree = "<group>"; };
+		A10000000000000000000021 /* DailyGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EDAF07412F602FDA00AF2A3E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"DailyGamesComplete/NYT Games/Connections/body.txt",
+				"DailyGamesComplete/NYT Games/Connections/localStorage.json",
+				"DailyGamesComplete/NYT Games/Connections/page.html",
+				"DailyGamesComplete/NYT Games/Wordle/body.txt",
+				"DailyGamesComplete/NYT Games/Wordle/localStorage.json",
+				"DailyGamesComplete/NYT Games/Wordle/page.html",
+				"DailyGamesComplete/Puzzmo/Big Crossword/body.txt",
+				"DailyGamesComplete/Puzzmo/Big Crossword/localStorage.json",
+				"DailyGamesComplete/Puzzmo/Big Crossword/page.html",
+				DailyGamesComplete/Puzzmo/Circuits/body.txt,
+				DailyGamesComplete/Puzzmo/Circuits/localStorage.json,
+				DailyGamesComplete/Puzzmo/Circuits/page.html,
+				DailyGamesComplete/Puzzmo/Crossword/body.txt,
+				DailyGamesComplete/Puzzmo/Crossword/localStorage.json,
+				DailyGamesComplete/Puzzmo/Crossword/page.html,
+				"DailyGamesComplete/Puzzmo/Mini Crossword/body.txt",
+				"DailyGamesComplete/Puzzmo/Mini Crossword/localStorage.json",
+				"DailyGamesComplete/Puzzmo/Mini Crossword/page.html",
+				"DailyGamesComplete/Puzzmo/Really Bad Chess/body.txt",
+				"DailyGamesComplete/Puzzmo/Really Bad Chess/localStorage.json",
+				"DailyGamesComplete/Puzzmo/Really Bad Chess/page.html",
+				DailyGamesComplete/Puzzmo/Ribbit/body.txt,
+				DailyGamesComplete/Puzzmo/Ribbit/localStorage.json,
+				DailyGamesComplete/Puzzmo/Ribbit/page.html,
+				DailyGamesComplete/Raddle/Raddle/body.txt,
+				DailyGamesComplete/Raddle/Raddle/localStorage.json,
+				DailyGamesComplete/Raddle/Raddle/page.html,
+				"DailyGamesComplete/The Atlantic/Bracket City/body.txt",
+				"DailyGamesComplete/The Atlantic/Bracket City/localStorage.json",
+				"DailyGamesComplete/The Atlantic/Bracket City/page.html",
+				"DailyGamesIncomplete/NYT Games/Connections/body.txt",
+				"DailyGamesIncomplete/NYT Games/Connections/localStorage.json",
+				"DailyGamesIncomplete/NYT Games/Connections/page.html",
+				"DailyGamesIncomplete/NYT Games/Wordle/body.txt",
+				"DailyGamesIncomplete/NYT Games/Wordle/localStorage.json",
+				"DailyGamesIncomplete/NYT Games/Wordle/page.html",
+				"DailyGamesIncomplete/Puzzmo/Big Crossword/body.txt",
+				"DailyGamesIncomplete/Puzzmo/Big Crossword/localStorage.json",
+				"DailyGamesIncomplete/Puzzmo/Big Crossword/page.html",
+				DailyGamesIncomplete/Puzzmo/Circuits/body.txt,
+				DailyGamesIncomplete/Puzzmo/Circuits/localStorage.json,
+				DailyGamesIncomplete/Puzzmo/Circuits/page.html,
+				DailyGamesIncomplete/Puzzmo/Crossword/body.txt,
+				DailyGamesIncomplete/Puzzmo/Crossword/localStorage.json,
+				DailyGamesIncomplete/Puzzmo/Crossword/page.html,
+				"DailyGamesIncomplete/Puzzmo/Mini Crossword/body.txt",
+				"DailyGamesIncomplete/Puzzmo/Mini Crossword/localStorage.json",
+				"DailyGamesIncomplete/Puzzmo/Mini Crossword/page.html",
+				"DailyGamesIncomplete/Puzzmo/Really Bad Chess/body.txt",
+				"DailyGamesIncomplete/Puzzmo/Really Bad Chess/localStorage.json",
+				"DailyGamesIncomplete/Puzzmo/Really Bad Chess/page.html",
+				DailyGamesIncomplete/Puzzmo/Ribbit/body.txt,
+				DailyGamesIncomplete/Puzzmo/Ribbit/localStorage.json,
+				DailyGamesIncomplete/Puzzmo/Ribbit/page.html,
+				DailyGamesIncomplete/Raddle/Raddle/body.txt,
+				DailyGamesIncomplete/Raddle/Raddle/localStorage.json,
+				DailyGamesIncomplete/Raddle/Raddle/page.html,
+				"DailyGamesIncomplete/The Atlantic/Bracket City/body.txt",
+				"DailyGamesIncomplete/The Atlantic/Bracket City/localStorage.json",
+				"DailyGamesIncomplete/The Atlantic/Bracket City/page.html",
+			);
+			target = E10000000000000000000001 /* DailyGames */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EDAF07132F602FBD00AF2A3E /* SampleData */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (EDAF07412F602FDA00AF2A3E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SampleData; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D10000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D10000000000000000000011 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C10000000000000000000002 /* DailyGames */,
+				C10000000000000000000008 /* DailyGamesTests */,
 				C10000000000000000000005 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,12 +145,23 @@
 		C10000000000000000000002 /* DailyGames */ = {
 			isa = PBXGroup;
 			children = (
+				EDAF07132F602FBD00AF2A3E /* SampleData */,
 				A10000000000000000000001 /* DailyGamesApp.swift */,
 				C10000000000000000000003 /* Models */,
 				C10000000000000000000004 /* Views */,
+				C10000000000000000000006 /* Services */,
+				C10000000000000000000007 /* Resources */,
 				A10000000000000000000006 /* Assets.xcassets */,
 			);
 			path = DailyGames;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000007 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000010 /* CompletionScripts */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C10000000000000000000003 /* Models */ = {
@@ -77,8 +186,25 @@
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000007 /* DailyGames.app */,
+				A10000000000000000000021 /* DailyGamesTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000006 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000008 /* GamePrefetchManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000008 /* DailyGamesTests */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000020 /* CompletionScriptTests.swift */,
+			);
+			path = DailyGamesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,10 +222,31 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				EDAF07132F602FBD00AF2A3E /* SampleData */,
+			);
 			name = DailyGames;
 			productName = DailyGames;
 			productReference = A10000000000000000000007 /* DailyGames.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E10000000000000000000002 /* DailyGamesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10000000000000000000012 /* Build configuration list for PBXNativeTarget "DailyGamesTests" */;
+			buildPhases = (
+				D10000000000000000000010 /* Sources */,
+				D10000000000000000000011 /* Frameworks */,
+				D10000000000000000000012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				H10000000000000000000001 /* PBXTargetDependency */,
+			);
+			name = DailyGamesTests;
+			productName = DailyGamesTests;
+			productReference = A10000000000000000000021 /* DailyGamesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,10 +256,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					E10000000000000000000001 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					E10000000000000000000002 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = E10000000000000000000001;
 					};
 				};
 			};
@@ -130,6 +281,7 @@
 			projectRoot = "";
 			targets = (
 				E10000000000000000000001 /* DailyGames */,
+				E10000000000000000000002 /* DailyGamesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +292,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10000000000000000000006 /* Assets.xcassets in Resources */,
+				B10000000000000000000010 /* CompletionScripts in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D10000000000000000000012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,10 +315,27 @@
 				B10000000000000000000003 /* ContentView.swift in Sources */,
 				B10000000000000000000004 /* WebView.swift in Sources */,
 				B10000000000000000000005 /* GamePlayerView.swift in Sources */,
+				B10000000000000000000007 /* GamePrefetchManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D10000000000000000000010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000020 /* CompletionScriptTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		H10000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E10000000000000000000001 /* DailyGames */;
+			targetProxy = G10000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F10000000000000000000001 /* Debug */ = {
@@ -196,6 +373,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = C2UW47HS8X;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -219,6 +397,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -259,6 +438,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = C2UW47HS8X;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -275,6 +455,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -288,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyGames/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyGames/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -329,6 +512,42 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F10000000000000000000010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailygames.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyGames.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyGames";
+			};
+			name = Debug;
+		};
+		F10000000000000000000011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailygames.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyGames.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyGames";
 			};
 			name = Release;
 		};
@@ -349,6 +568,15 @@
 			buildConfigurations = (
 				F10000000000000000000004 /* Debug */,
 				F10000000000000000000005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10000000000000000000012 /* Build configuration list for PBXNativeTarget "DailyGamesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000010 /* Debug */,
+				F10000000000000000000011 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

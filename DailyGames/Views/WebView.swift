@@ -1,6 +1,7 @@
 import SwiftUI
 import WebKit
 
+@MainActor
 class WebViewModel: ObservableObject {
     @Published var estimatedProgress: Double = 0
     @Published var isLoading: Bool = false
@@ -8,15 +9,52 @@ class WebViewModel: ObservableObject {
     @Published var canGoForward: Bool = false
 
     let webView: WKWebView
+    private var observations: [NSKeyValueObservation] = []
 
-    init() {
-        let config = WKWebViewConfiguration()
-        config.allowsInlineMediaPlayback = true
-        config.mediaTypesRequiringUserActionForPlayback = []
+    init(webView: WKWebView? = nil) {
+        if let webView = webView {
+            self.webView = webView
+        } else {
+            let config = WKWebViewConfiguration()
+            config.allowsInlineMediaPlayback = true
+            config.mediaTypesRequiringUserActionForPlayback = []
 
-        let webView = WKWebView(frame: .zero, configuration: config)
-        webView.allowsBackForwardNavigationGestures = true
-        self.webView = webView
+            let newWebView = WKWebView(frame: .zero, configuration: config)
+            newWebView.allowsBackForwardNavigationGestures = true
+            self.webView = newWebView
+        }
+
+        setupObservers()
+    }
+
+    private func setupObservers() {
+        observations = [
+            webView.observe(\.estimatedProgress, options: .new) { [weak self] wv, _ in
+                Task { @MainActor in
+                    self?.estimatedProgress = wv.estimatedProgress
+                }
+            },
+            webView.observe(\.isLoading, options: .new) { [weak self] wv, _ in
+                Task { @MainActor in
+                    self?.isLoading = wv.isLoading
+                }
+            },
+            webView.observe(\.canGoBack, options: .new) { [weak self] wv, _ in
+                Task { @MainActor in
+                    self?.canGoBack = wv.canGoBack
+                }
+            },
+            webView.observe(\.canGoForward, options: .new) { [weak self] wv, _ in
+                Task { @MainActor in
+                    self?.canGoForward = wv.canGoForward
+                }
+            },
+        ]
+
+        estimatedProgress = webView.estimatedProgress
+        isLoading = webView.isLoading
+        canGoBack = webView.canGoBack
+        canGoForward = webView.canGoForward
     }
 
     func load(_ url: URL) {
@@ -34,7 +72,6 @@ struct WebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView {
         viewModel.webView.navigationDelegate = context.coordinator
         viewModel.webView.uiDelegate = context.coordinator
-        context.coordinator.setupObservers(for: viewModel.webView)
         return viewModel.webView
     }
 
@@ -46,39 +83,11 @@ struct WebView: UIViewRepresentable {
 
     class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate {
         let viewModel: WebViewModel
-        private var observations: [NSKeyValueObservation] = []
 
         init(viewModel: WebViewModel) {
             self.viewModel = viewModel
         }
 
-        func setupObservers(for webView: WKWebView) {
-            observations.removeAll()
-            observations = [
-                webView.observe(\.estimatedProgress, options: .new) { [weak self] wv, _ in
-                    DispatchQueue.main.async {
-                        self?.viewModel.estimatedProgress = wv.estimatedProgress
-                    }
-                },
-                webView.observe(\.isLoading, options: .new) { [weak self] wv, _ in
-                    DispatchQueue.main.async {
-                        self?.viewModel.isLoading = wv.isLoading
-                    }
-                },
-                webView.observe(\.canGoBack, options: .new) { [weak self] wv, _ in
-                    DispatchQueue.main.async {
-                        self?.viewModel.canGoBack = wv.canGoBack
-                    }
-                },
-                webView.observe(\.canGoForward, options: .new) { [weak self] wv, _ in
-                    DispatchQueue.main.async {
-                        self?.viewModel.canGoForward = wv.canGoForward
-                    }
-                },
-            ]
-        }
-
-        // Handle target="_blank" links by loading them in the same web view
         func webView(
             _ webView: WKWebView,
             createWebViewWith configuration: WKWebViewConfiguration,

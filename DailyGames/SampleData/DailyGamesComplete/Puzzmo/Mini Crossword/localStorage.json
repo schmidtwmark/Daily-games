@@ -1,0 +1,1277 @@
+{
+  "gamesPlayed": 1,
+  "_li_duid": "966b602f0c1c--01kjvh6r6q0h5nkkz386cdcxn5",
+  "lastGamePlayed": "today:/2026-03-04/crossword/mini",
+  "sa-user-id-v3": "s%3AAQAKIO-cVWY5e3IqVplw2Xo9FgDTBUlfwv-V4MJY5e0TStqtEAQYAyCx5KPNBjABOgTeftdOQgTf_WIL.vw046jttDxx%2Fw%2BxrdnFYqgAa81%2BWcU2iq%2F4NtyFxZhk",
+  "puzmoSessionSwitch": 1772638470277,
+  "apstagCfg": {
+    "CONFIG_CALL_ENABLED": true,
+    "v": 2
+  },
+  "offline-gameStates": [],
+  "__tamLIResolveResult_cst": "zix7LPQsHA==",
+  "plonkVisualizerHidden": false,
+  "_lc2_fpi_meta": {
+    "w": 1772598026455
+  },
+  "puzmoGameplayIDFallback": "03q2omg3JzBlTYZ_GLehq",
+  "_pubcid": "25a443d0-98d4-4c98-85c7-c30c0e6211a1",
+  "puzmoAuth": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SUQiOiJjbHpkMG4xNTIybjd2MnRtejAycnE2NThrOmFjY291bnQiLCJ1c2VySUQiOiJjbHpkMG4xNTEybjd1MnRtemVybnk0cXZuOnVzZXIiLCJyb2xlcyI6InVzZXIiLCJpYXQiOjE3NzI2Mzg0NzAsImV4cCI6MTgwNzE5ODQ3MH0.OyG6wOvNWnwEuF1OkyTswPQd4-bKsiW482dKotfeUH0",
+    "data": {
+      "userID": "clzd0n1512n7u2tmzerny4qvn:user",
+      "accountID": "clzd0n1522n7v2tmz02rq658k:account",
+      "roles": "user"
+    }
+  },
+  "loglevel": "WARN",
+  "_lc2_fpi": "966b602f0c1c--01kjvh6r6q0h5nkkz386cdcxn5",
+  "id5id_last": "Wed, 04 Mar 2026 23:38:31 GMT",
+  "ix_features": {
+    "expiry": 1772642045731,
+    "features": {
+      "pbjs_allow_all_eids": {
+        "activated": true
+      },
+      "pbjs_enable_multiformat": {
+        "activated": true
+      }
+    }
+  },
+  "apstagCxMEnabled": 1,
+  "__tamLIResolveResult_exp": "Thu, 05 Mar 2026 13:17:31 GMT",
+  "id5id": "%7B%22signature%22%3A%22ID5_Aq_lX0hOdDqZQ2HjBYT9PqM8hdh200XlQxaI01Jv9ijkUBgQ2oKEbOpwTl4CKO5CHmgLcb9mTt4bJUAmGnLnvHNSC2js72F3dX1A_Yz_cgiiCMU76UH0IAqfJcDiW9awsEcujvu3JxCWurYTabGaSGGDYSbbIZSApYv74lQ-qIGgSu_IrW8%22%2C%22created_at%22%3A%222026-03-04T13%3A17%3A32Z%22%2C%22id5_consent%22%3Atrue%2C%22original_uid%22%3A%22ID5*TSE0YDwE7UMUh7cNThgNB1CwyLKLC227S6aUY6ysuRv__2mowndaAAEBCmmoMOwAjmvnqpzMkMgz6ccERgDchg%22%2C%22universal_uid%22%3A%22ID5*YbAr60SABR4eT7yvRb26gAV5sHmChWXq31WdieFBHin__2mowndaAAEBCmmoMOwAjmvDkinH0t-jeWAYBs5AlA%22%2C%22link_type%22%3A1%2C%22cascade_needed%22%3Atrue%2C%22privacy%22%3A%7B%22jurisdiction%22%3A%22other%22%2C%22id5_consent%22%3Atrue%7D%2C%22ext%22%3A%7B%22linkType%22%3A1%2C%22pba%22%3A%225CFsA9l4m6XHlZq1H8Box5iszNk9cB4ly4kxPC15F%2BTYjAclhEkX28ZylfCbIVtfaDKxnrzHtRIOOP1RdmD4bw%3D%3D%22%7D%2C%22cache_control%22%3A%7B%22max_age_sec%22%3A7200%7D%2C%22ids%22%3A%7B%22id5id%22%3A%7B%22eid%22%3A%7B%22source%22%3A%22id5-sync.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22ID5*YbAr60SABR4eT7yvRb26gAV5sHmChWXq31WdieFBHin__2mowndaAAEBCmmoMOwAjmvDkinH0t-jeWAYBs5AlA%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22linkType%22%3A1%2C%22pba%22%3A%225CFsA9l4m6XHlZq1H8Box5iszNk9cB4ly4kxPC15F%2BTYjAclhEkX28ZylfCbIVtfaDKxnrzHtRIOOP1RdmD4bw%3D%3D%22%7D%7D%5D%7D%7D%7D%2C%22tags%22%3A%7B%22id%22%3A%22y%22%7D%7D",
+  "__tamLIResolveResult": "%7B%22bidswitch%22%3A%22643192e5-ec9a-4ea6-a668-a753bfd6817a%22%2C%22magnite%22%3A%22MJT5KS0S-B-9ISV%22%2C%22sharethrough%22%3A%22d1cbb486-4a5a-4205-b5cb-e6d732df4baa%22%2C%22medianet%22%3A%224106184345784989000V10%22%2C%22triplelift%22%3A%221938079579324155810576%22%2C%22nonId%22%3A%2226-fcGe7%2FvWG9JGkX7QaS2QsHZ%2FkkZS4l2akW0TL7n%2FVUiZDCng3rc7XEGTbmeKp%2B3RsWL9hD%2BgmGmRP0UCIXX%2BGbAZnWLrauYG2v3%2Bm54JFdNCNw%3D%3D%22%2C%22sovrn%22%3A%223a63ff07c8ef3243693bc597%22%2C%22pubmatic%22%3A%2272B59DD1-6A6C-4C18-A679-03E95E2ABF8D%22%2C%22index%22%3A%22aYF1AdHM6wUAAVT1CI6RkwAA%265984%22%2C%22openx%22%3A%221ad0a15f-6ea3-4e12-816c-feb573bfc2cd%22%7D",
+  "sa-user-id-v2": "s%3A0WM3Nh1zUVFM7CGtSUOLg0LibkE.vY5xGVxWi%2FMTtUrTUR%2FVMwwzN7Kysp3ATtOMtOjIBTU",
+  "id5id_exp": "Tue, 02 Jun 2026 23:38:31 GMT",
+  "sidebar_state_really-bad-chess": {
+    "expandSidebar": true,
+    "sidebarValues": []
+  },
+  "geo-location": {
+    "data": "{\"country\":\"US\",\"region\":\"IL\"}",
+    "expire": 1772766129882
+  },
+  "id5id_cst": "zix7LPQsHA==",
+  "aps:3070:idVendors/enabled": [
+    "liveintent",
+    "pair",
+    "amx",
+    "33across",
+    "merkle",
+    "captify",
+    "publink",
+    "anonymised",
+    "quantcast",
+    "idPlus",
+    "intimateMerger",
+    "ddb_key_638",
+    "fabrick",
+    "criteo",
+    "yahoo",
+    "uid",
+    "liveRamp",
+    "id5",
+    "unifiedid",
+    "pubcommon",
+    "audigent",
+    "lightPublisherAudiences",
+    "fTrack",
+    "lotame"
+  ],
+  "aps:3070:sessionMarker/marker": "ee7cc697-ab8f-4879-bfd9-4fff647cfdb8_2026-03-04T15:34:05.454Z",
+  "puzzmoBootstrapData": {
+    "userState": {
+      "cookieConsent": true,
+      "country": "US",
+      "gameSettings": {
+        "crossword": {
+          "pinHint": false,
+          "monoGrid": false,
+          "viewMode": "standard",
+          "showToolbar": false,
+          "autoNextClue": true,
+          "showWordGaps": true,
+          "showBackButton": false,
+          "wordSequencing": "numerical",
+          "hideWordDisplay": false,
+          "hintConfirmation": true,
+          "showRebusLocations": true,
+          "solvingConstraints": "no",
+          "skipCompletedAnswers": false,
+          "highlightWrongLetters": "after-completion",
+          "arrowKeysToggleDirection": false
+        }
+      },
+      "siteSettings": {
+        "haptics": null,
+        "sounds": null
+      },
+      "givenLocationSuffix": "05",
+      "id": "CBAkhcWRIHqVH2QQBXi-F:userstate",
+      "nakamaLogin": "clzd0n1o88k7p2tra1wel72sv@user.puzzmo.com",
+      "nakamaPassword": "clzd0n1o88k7q2tra8nrq77sy",
+      "ownerID": "clzd0n1512n7u2tmzerny4qvn:user",
+      "policy": "COPPA",
+      "streak": {
+        "bongo": {
+          "max": 1,
+          "total": 2,
+          "current": 1,
+          "lastUpdated": "2024-11-21"
+        },
+        "memoku": {
+          "max": 9,
+          "total": 10,
+          "current": 1,
+          "lastUpdated": "2025-03-31"
+        },
+        "ribbit": {
+          "max": 63,
+          "total": 63,
+          "current": 63,
+          "lastUpdated": "2026-03-04"
+        },
+        "circuits": {
+          "max": 121,
+          "total": 175,
+          "current": 121,
+          "lastUpdated": "2026-03-04"
+        },
+        "flip-art": {
+          "max": 3,
+          "total": 3,
+          "current": 3,
+          "lastUpdated": "2024-08-04"
+        },
+        "wordbind": {
+          "max": 1,
+          "total": 1,
+          "current": 1,
+          "lastUpdated": "2026-01-10"
+        },
+        "crossword": {
+          "max": 509,
+          "total": 656,
+          "current": 2,
+          "lastUpdated": "2026-03-04"
+        },
+        "typeshift": {
+          "max": 1,
+          "total": 3,
+          "current": 1,
+          "lastUpdated": "2025-01-01"
+        },
+        "missing-link": {
+          "max": 2,
+          "total": 8,
+          "current": 1,
+          "lastUpdated": "2025-07-23"
+        },
+        "pile-up-poker": {
+          "max": 1,
+          "total": 7,
+          "current": 1,
+          "lastUpdated": "2024-08-10"
+        },
+        "really-bad-chess": {
+          "max": 92,
+          "total": 179,
+          "current": 92,
+          "lastUpdated": "2026-03-04"
+        },
+        "pile-up-poker-pro": {
+          "max": 1,
+          "total": 1,
+          "current": 1,
+          "lastUpdated": "2025-06-01"
+        },
+        "crossword:big-xword": {
+          "max": 1,
+          "total": 4,
+          "current": 1,
+          "lastUpdated": "2026-03-03"
+        },
+        "crossword:mini-xword": {
+          "max": 47,
+          "total": 47,
+          "current": 47,
+          "lastUpdated": "2026-03-04"
+        }
+      },
+      "gamesPlayed": 1159,
+      "gameCenterID": "A:_7481f91288eee5019c652f852fa8ed11",
+      "atGamesCap": false
+    },
+    "currentUser": {
+      "id": "clzd0n1512n7u2tmzerny4qvn:user",
+      "type": "Paid",
+      "userAccounts": [
+        {
+          "id": "clzd0n1522n7v2tmz02rq658k:account",
+          "email": "mark.schmidt@hey.com",
+          "emailVerified": true,
+          "users": [
+            {
+              "id": "cmm5otdii2ccg1wrggamdebkt:user",
+              "avatarURL": "https://cdn.puzzmo.com/avatars/2.png",
+              "name": "OhSchmidtItsJam",
+              "username": "ohschmidtitsjam",
+              "usernameID": "yh"
+            },
+            {
+              "id": "clzd0n1512n7u2tmzerny4qvn:user",
+              "avatarURL": "https://cdn.puzzmo.com/avatars/4.png",
+              "name": "WittyName",
+              "username": "wittyname",
+              "usernameID": "mi"
+            },
+            {
+              "id": "cmm5or3xb2fea1wnvgoth7eu5:user",
+              "avatarURL": "https://cdn.puzzmo.com/avatars/5.png",
+              "name": "Jam",
+              "username": "ehrhartj24",
+              "usernameID": "sa"
+            },
+            {
+              "id": "cmm5otire2ftx1wnv84j7hxcf:user",
+              "avatarURL": "https://cdn.puzzmo.com/avatars/2.png",
+              "name": "OhSchmidtItsJam",
+              "username": "ohschmidtitsjam",
+              "usernameID": "pc"
+            },
+            {
+              "id": "cmm5otdub1wg71woncbzu3n60:user",
+              "avatarURL": "https://cdn.puzzmo.com/avatars/2.png",
+              "name": "OhSchmidtItsJam",
+              "username": "ohschmidtitsjam",
+              "usernameID": "qc"
+            }
+          ],
+          "subscriptionActive": true,
+          "trialEligible": false
+        }
+      ],
+      "authConnections": [],
+      "__fragments": {
+        "OauthConnectionsFragment": {}
+      },
+      "__id": "clzd0n1512n7u2tmzerny4qvn:user",
+      "__fragmentOwner": {
+        "identifier": "a0b10972155d7702d75013bc3c6691a5{\"partnerSlug\":null}",
+        "node": {
+          "fragment": {
+            "argumentDefinitions": [
+              {
+                "defaultValue": null,
+                "kind": "LocalArgument",
+                "name": "partnerSlug"
+              }
+            ],
+            "kind": "Fragment",
+            "metadata": null,
+            "name": "PuzzmoQuery",
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "concreteType": "System",
+                "kind": "LinkedField",
+                "name": "system",
+                "plural": false,
+                "selections": [
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "todayDateKey",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "contextFlags",
+                    "storageKey": null
+                  }
+                ],
+                "storageKey": null
+              },
+              {
+                "args": null,
+                "kind": "FragmentSpread",
+                "name": "PuzzmoFragment"
+              },
+              {
+                "alias": null,
+                "args": [
+                  {
+                    "kind": "Variable",
+                    "name": "id",
+                    "variableName": "partnerSlug"
+                  }
+                ],
+                "concreteType": "PublishingPartner",
+                "kind": "LinkedField",
+                "name": "publishingPartner",
+                "plural": false,
+                "selections": [
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "id",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "slug",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "name",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "status",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "requiresPassword",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "currency",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "externalMarketID",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "newsletterOnDefault",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "requireAcceptanceOfTOS",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "flags",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "logoWidth",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "logoHeight",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "logoLongBlack",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "logoLongWhite",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "themeOverrides",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "navHeight",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "theirLogoOffsets",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "ourLogoOffsets",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "ourLogoFGOverride",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "backMessage",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "backURL",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "appearance",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "navFG",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "navBG",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "bgColor",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "ourLogoFG",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "tosURL",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "policyURL",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "shareURL",
+                    "storageKey": null
+                  }
+                ],
+                "storageKey": null
+              }
+            ],
+            "type": "Query",
+            "abstractKey": null
+          },
+          "kind": "Request",
+          "operation": {
+            "argumentDefinitions": [
+              {
+                "defaultValue": null,
+                "kind": "LocalArgument",
+                "name": "partnerSlug"
+              }
+            ],
+            "kind": "Operation",
+            "name": "PuzzmoQuery",
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "concreteType": "System",
+                "kind": "LinkedField",
+                "name": "system",
+                "plural": false,
+                "selections": [
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "todayDateKey",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "contextFlags",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "id",
+                    "storageKey": null
+                  }
+                ],
+                "storageKey": null
+              },
+              {
+                "alias": null,
+                "args": null,
+                "concreteType": "User",
+                "kind": "LinkedField",
+                "name": "currentUser",
+                "plural": false,
+                "selections": [
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "id",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "type",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "concreteType": "CurrentUserAccount",
+                    "kind": "LinkedField",
+                    "name": "userAccounts",
+                    "plural": true,
+                    "selections": [
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "id",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "email",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "emailVerified",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "concreteType": "User",
+                        "kind": "LinkedField",
+                        "name": "users",
+                        "plural": true,
+                        "selections": [
+                          {
+                            "alias": null,
+                            "args": null,
+                            "kind": "ScalarField",
+                            "name": "id",
+                            "storageKey": null
+                          },
+                          {
+                            "alias": null,
+                            "args": null,
+                            "kind": "ScalarField",
+                            "name": "avatarURL",
+                            "storageKey": null
+                          },
+                          {
+                            "alias": null,
+                            "args": null,
+                            "kind": "ScalarField",
+                            "name": "name",
+                            "storageKey": null
+                          },
+                          {
+                            "alias": null,
+                            "args": null,
+                            "kind": "ScalarField",
+                            "name": "username",
+                            "storageKey": null
+                          },
+                          {
+                            "alias": null,
+                            "args": null,
+                            "kind": "ScalarField",
+                            "name": "usernameID",
+                            "storageKey": null
+                          }
+                        ],
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "subscriptionActive",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "trialEligible",
+                        "storageKey": null
+                      }
+                    ],
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "concreteType": "UserOauthConnection",
+                    "kind": "LinkedField",
+                    "name": "authConnections",
+                    "plural": true,
+                    "selections": [
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "type",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "handle",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "avatarURL",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "displayName",
+                        "storageKey": null
+                      }
+                    ],
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "flagsArr",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "roles",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "username",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "usernameID",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "publishingName",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "avatarURL",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "name",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "nakamaID",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "notificationsCursor",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "customType",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "settings",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "concreteType": "PublishingPartner",
+                    "kind": "LinkedField",
+                    "name": "preferredPartner",
+                    "plural": false,
+                    "selections": [
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "id",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "backMessage",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "backURL",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "appearance",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "themeOverrides",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "slug",
+                        "storageKey": null
+                      }
+                    ],
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "friendNakamaIDs",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "emailSHA",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "followingCount",
+                    "storageKey": null
+                  }
+                ],
+                "storageKey": null
+              },
+              {
+                "alias": null,
+                "args": null,
+                "concreteType": "UserState",
+                "kind": "LinkedField",
+                "name": "userState",
+                "plural": false,
+                "selections": [
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "cookieConsent",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "country",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "gameSettings",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "concreteType": "UserStateSiteSettings",
+                    "kind": "LinkedField",
+                    "name": "siteSettings",
+                    "plural": false,
+                    "selections": [
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "haptics",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "sounds",
+                        "storageKey": null
+                      }
+                    ],
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "givenLocationSuffix",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "id",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "nakamaLogin",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "nakamaPassword",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "ownerID",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "policy",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "streak",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "gamesPlayed",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "gameCenterID",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "atGamesCap",
+                    "storageKey": null
+                  }
+                ],
+                "storageKey": null
+              },
+              {
+                "alias": null,
+                "args": [
+                  {
+                    "kind": "Variable",
+                    "name": "id",
+                    "variableName": "partnerSlug"
+                  }
+                ],
+                "concreteType": "PublishingPartner",
+                "kind": "LinkedField",
+                "name": "publishingPartner",
+                "plural": false,
+                "selections": [
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "id",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "slug",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "name",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "status",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "requiresPassword",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "currency",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "externalMarketID",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "newsletterOnDefault",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "requireAcceptanceOfTOS",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "flags",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "logoWidth",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "logoHeight",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "logoLongBlack",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "logoLongWhite",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "themeOverrides",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "navHeight",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "theirLogoOffsets",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "ourLogoOffsets",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "ourLogoFGOverride",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "backMessage",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "backURL",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "appearance",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "navFG",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "navBG",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "bgColor",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "ourLogoFG",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "tosURL",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "policyURL",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "shareURL",
+                    "storageKey": null
+                  }
+                ],
+                "storageKey": null
+              }
+            ]
+          },
+          "params": {
+            "cacheID": "a0b10972155d7702d75013bc3c6691a5",
+            "id": null,
+            "metadata": {},
+            "name": "PuzzmoQuery",
+            "operationKind": "query",
+            "text": "query PuzzmoQuery(\n  $partnerSlug: ID\n) {\n  system {\n    todayDateKey\n    contextFlags\n    id\n  }\n  ...PuzzmoFragment\n  publishingPartner(id: $partnerSlug) {\n    id\n    slug\n    name\n    status\n    requiresPassword\n    currency\n    externalMarketID\n    newsletterOnDefault\n    requireAcceptanceOfTOS\n    flags\n    logoWidth\n    logoHeight\n    logoLongBlack\n    logoLongWhite\n    themeOverrides\n    navHeight\n    theirLogoOffsets\n    ourLogoOffsets\n    ourLogoFGOverride\n    backMessage\n    backURL\n    appearance\n    navFG\n    navBG\n    bgColor\n    ourLogoFG\n    tosURL\n    policyURL\n    shareURL\n  }\n}\n\nfragment OauthConnectionsFragment on User {\n  authConnections {\n    handle\n    type\n    avatarURL\n    displayName\n  }\n}\n\nfragment PuzzmoCurrentUserFragment on User {\n  id\n  type\n  userAccounts {\n    id\n    email\n    emailVerified\n    users {\n      id\n      avatarURL\n      name\n      username\n      usernameID\n    }\n    subscriptionActive\n    trialEligible\n  }\n  authConnections {\n    type\n  }\n  ...OauthConnectionsFragment\n  flagsArr\n  roles\n  username\n  usernameID\n  publishingName\n  avatarURL\n  name\n  nakamaID\n  notificationsCursor\n  customType\n  settings\n  preferredPartner {\n    id\n    backMessage\n    backURL\n    appearance\n    themeOverrides\n    slug\n  }\n  friendNakamaIDs\n  emailSHA\n  followingCount\n}\n\nfragment PuzzmoCurrentUserStateFragment on UserState {\n  cookieConsent\n  country\n  gameSettings\n  siteSettings {\n    haptics\n    sounds\n  }\n  givenLocationSuffix\n  id\n  nakamaLogin\n  nakamaPassword\n  ownerID\n  policy\n  streak\n  gamesPlayed\n  gameCenterID\n  atGamesCap\n}\n\nfragment PuzzmoFragment on Query {\n  currentUser {\n    ...PuzzmoCurrentUserFragment\n    id\n  }\n  userState {\n    ...PuzzmoCurrentUserStateFragment\n    id\n  }\n}\n"
+          },
+          "hash": "ede80cf9ae5ea68326ee71ccc4dbdff7"
+        },
+        "variables": {
+          "partnerSlug": null
+        },
+        "cacheConfig": {
+          "force": true
+        }
+      },
+      "flagsArr": [
+        2
+      ],
+      "roles": "user",
+      "username": "wittyname",
+      "usernameID": "mi",
+      "publishingName": null,
+      "avatarURL": "https://cdn.puzzmo.com/avatars/4.png",
+      "name": "WittyName",
+      "nakamaID": "8e2de2f8-3f85-435a-8750-94885ca7106e",
+      "notificationsCursor": "",
+      "customType": null,
+      "settings": {
+        "hideTimer": true,
+        "todayPageLeaderboardIDs": [
+          "group-ece51d82-0a4b-4460-a1c9-7a0d5777b221"
+        ]
+      },
+      "preferredPartner": null,
+      "friendNakamaIDs": [],
+      "emailSHA": "ec9690f0765b7743760da8fd68190f53f720cc8f8e4f0ac6aeb9c5d116cec157",
+      "followingCount": 4
+    },
+    "publishingPartner": null,
+    "system": {
+      "todayDateKey": "2026-03-04",
+      "contextFlags": []
+    }
+  },
+  "_pubcid_exp": "Fri, 05 Mar 2027 03:02:09 GMT",
+  "sa-user-id": "s%3A0-d1633736-1d73-5151-4cec-21ad49438b83.p1HYprqHlz7C7AKjdg6RWB33xhL%2FyL3sH2PqgW3i7AA"
+}

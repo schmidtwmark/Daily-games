@@ -1,0 +1,489 @@
+{
+  "_cb_svref": "external",
+  "_sharedID_exp": "Fri, 03 Apr 2026 13:34:06 GMT",
+  "_pdfps": [
+    "165471",
+    "165690",
+    "165700",
+    "238841",
+    "238842"
+  ],
+  "_li_duid": "72b00449ccdb--01kjvh5yz1wxw4tcw7jrhs7q1g",
+  "_ccmsi": "1772631246268_6ey5xth0n|1772631246269",
+  "pStore-_parsely_visitor": "{\"id\":\"pid=b047b46f5acbd7654382190f9cbd387b\",\"session_count\":2,\"last_session_ts\":1772630255233}|^1806795257711",
+  "__tamLIResolveResult_cst": "BCxSLIksuA==",
+  "_psegs": [
+    146762,
+    157479,
+    165471,
+    165690,
+    165700,
+    213558,
+    238841,
+    238842
+  ],
+  "permutive-data-queries": {
+    "event-source-id": "b41c3bf9-da0e-4647-b4f6-5674ab41007a"
+  },
+  "_cb": "CsCivCCd7lUlDcz8jv",
+  "33acrossId_cst": "BCxSLIksuA==",
+  "_lc2_fpi": "72b00449ccdb--01kjvh5yz1wxw4tcw7jrhs7q1g",
+  "_sp_local_state": {
+    "usnat": {
+      "mmsCookies": [
+        "_sp_v1_ss=1:H4sIAAAAAAAAAItWqo5RKimOUbLKK83J0YlRSkVil4AlqmtrlWIBBrfP6SgAAAA%3D"
+      ],
+      "propertyId": 39864,
+      "messageId": 0
+    },
+    "custom": {
+      "mmsCookies": [
+        "_sp_v1_ss=1:H4sIAAAAAAAAAItWqo5RKimOUbLKK83J0YlRSkVil4AlqmtrlXTgyqKBjDwQw6A2FqfyWADYf5_yVwAAAA%3D%3D"
+      ],
+      "propertyId": 39864
+    },
+    "gdpr": {
+      "mmsCookies": [
+        "_sp_v1_ss=1:H4sIAAAAAAAAAItWqo5RKimOUbLKK83J0YlRSkVil4AlqmtrlXTgyqIxGPg0xpIsgWQVkS4i1eFkuZd6BsUCAAGI8pBzAQAA"
+      ],
+      "propertyId": 39864,
+      "messageId": 0
+    }
+  },
+  "33acrossId_last": "Wed, 04 Mar 2026 13:34:14 GMT",
+  "_sharedID": "d5db3547-d170-4fa4-9769-83c0c55768e0",
+  "33acrossId_exp": "Sun, 31 May 2026 13:34:14 GMT",
+  "_sp_user_consent_39864": {
+    "gdpr": {
+      "authId": null,
+      "uuid": "ac806126-1862-4d64-9a58-37d08f8e92b9",
+      "getMessageAlways": false,
+      "applies": false
+    },
+    "usnat": {
+      "authId": null,
+      "uuid": "4dc75b97-eee0-4d47-951c-cb32525e3bbe",
+      "applicableSections": [
+        7
+      ],
+      "applies": true,
+      "legislation": "usnat",
+      "categories": [
+        "648c9c48e17a3c7a82360c54"
+      ],
+      "dateCreated": "2026-03-04T04:13:30.307Z",
+      "expirationDate": "2027-03-04T04:13:30.307Z",
+      "consentStatus": {
+        "rejectedAny": false,
+        "consentedToAll": true,
+        "consentedToAny": false,
+        "granularStatus": {
+          "sellStatus": true,
+          "shareStatus": true,
+          "sensitiveDataStatus": false,
+          "gpcStatus": false
+        },
+        "hasConsentData": false,
+        "previousOptInAll": false
+      },
+      "consentStrings": [
+        {
+          "sectionId": 7,
+          "sectionName": "usnat",
+          "consentString": "BVQqAAAAAgA.QA"
+        }
+      ],
+      "userConsents": {
+        "applies": true,
+        "categories": [
+          {
+            "_id": "648c9c48e17a3c7a82360c54",
+            "systemId": 3,
+            "consented": true
+          }
+        ],
+        "vendors": [
+          {
+            "_id": "6425d7744f9aee6206619515",
+            "consented": true
+          }
+        ]
+      },
+      "actions": [],
+      "consentString": "DBABLA~BVQqAAAAAgA.QA"
+    },
+    "version": 1
+  },
+  "__tamLIResolveResult_exp": "Thu, 05 Mar 2026 13:17:30 GMT",
+  "id5id_last": "Wed, 04 Mar 2026 13:17:32 GMT",
+  "permutive-data-misc": {
+    "identities": {
+      "pxid": {
+        "value": "050b2183-13e9-4a08-9017-e02b0f3fe844",
+        "expiry": 1772717646344
+      }
+    },
+    "metricsEnabled": true
+  },
+  "id5id": "%7B%22signature%22%3A%22ID5_Ap_cnxnrHMTeScwNMYxQj6dbwI9N0SJUemDnRhxXLeREBhnj0nCqFmLskhTLRbmEeuRcg8WL3-MkoUq3_ncStPp6JlXe4xYhd8jhKPy0-nFip8sL-2Z8dcr0AdZ9lYEx3Ny5cKqQXhqUAslY0EsltaT_v50lKfiQuh1-2FjX-3JWga9dUq4%22%2C%22created_at%22%3A%222026-03-04T13%3A17%3A32.857708351Z%22%2C%22id5_consent%22%3Atrue%2C%22original_uid%22%3A%22ID5*t1GWCCV_zY_T7Epqvfv2wmSejZrW4TaF9-kw-o4_2PP__2moMOxaAAEBCmmoMOwAjmusSxjVPFPhl418mHS0cQ%22%2C%22universal_uid%22%3A%22ID5*4R_SScQv_Lye4EUNxRJDIoXWSdsCKpxIX_pkK2Hu54v__2moMOxaAAEBCmmoMOwAjmvwH0daOMA0QPlil9BUpA%22%2C%22link_type%22%3A1%2C%22cascade_needed%22%3Atrue%2C%22privacy%22%3A%7B%22jurisdiction%22%3A%22other%22%2C%22id5_consent%22%3Atrue%7D%2C%22ext%22%3A%7B%22linkType%22%3A1%2C%22pba%22%3A%22HBzuc5q8rIv%2FE7MVbCgAP%2BATaCOwvxdls1pvRw2NO6b4PDL0keu%2BX4a8aCNd1kSWf8WilCncdgA9s2e5XcK7zA%3D%3D%22%7D%2C%22cache_control%22%3A%7B%22max_age_sec%22%3A7200%7D%2C%22ids%22%3A%7B%22id5id%22%3A%7B%22eid%22%3A%7B%22source%22%3A%22id5-sync.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22ID5*4R_SScQv_Lye4EUNxRJDIoXWSdsCKpxIX_pkK2Hu54v__2moMOxaAAEBCmmoMOwAjmvwH0daOMA0QPlil9BUpA%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22linkType%22%3A1%2C%22pba%22%3A%22HBzuc5q8rIv%2FE7MVbCgAP%2BATaCOwvxdls1pvRw2NO6b4PDL0keu%2BX4a8aCNd1kSWf8WilCncdgA9s2e5XcK7zA%3D%3D%22%7D%7D%5D%7D%7D%7D%2C%22tags%22%3A%7B%22id%22%3A%22y%22%7D%7D",
+  "PathforaPageView": {
+    "$": "3",
+    "@": "2027-03-04T13:34:19.022Z",
+    "PATHFORA": "1.2.20"
+  },
+  "permutive-prebid-rtd": {
+    "acBidders": [
+      "pubmatic",
+      "appnexus",
+      "openx",
+      "ix"
+    ]
+  },
+  "33acrossId": "v1.0010b00002cG8kQAAS.1051.fXmFEjF9RLy5JjZkOt5PJpsCPGnTRYNPCXwKauxHrzPIORaPqHRge0Hp2YJvcm56szrTBjbTJ%2FXlcZnyHl8T7GZREuqzd8ZBnvfh0MVn0NM00l7dTm3Ujw8fp%2FGelo734QdxYlS2U%2B6GOhNlZP3Ez2P9hgrM3TRL063qxramvfbCjJhm9YLZdKbXdylZYy6ooOWHLcjaXq2DMxWwuhXN1SlBKc%2F%2BOvxtizBLgzzdL4Tab8m3iSCJ%2BdLwndeDefn%2BEyQFp2hMmeFW6cwXEPlr%2Fu20fezff1RIlYzSBekv%2FlE1HFcOlApYJBzjmjTKYGHRGaxtAl%2F74jGJG4meET3G%2B5RACg1QXyXwIx4ZskrH03COsZDKtvd4UKuK6112TLPKbQd2mIFdSWdB6JfqvHvgLZzlwQTB2cQ%2FiNbbqZrtlFmR7gkXLfkB3NGe5O3Uh5bi45HOhTLM9NeSghxyDwZryAm3Cc%2B57I0rpsmIBECXpJWbapYOkiowPZEMMcbINiYe4N9XyEurFlesMJIZMsb6vr8JithR5ksHBJ4JdFN7k12wHRVC%2BlYXgrQCWoPR9GfUcBJTIwcuszVWnbWhUE8BUjlAoRZjNh3OofCJyz85Q4%2BKL0yweJmVAMKAfyPjfYeDmuL2M2KKdHl%2F6oa7Ty%2Fgjntm3SVD4xv2c7M3SQKZ7eRApefQ%2FAXJq3%2BIia%2FC8T0ydkLNN0rNVImlmu0xIz5toaMJ3yhxQeXC9zU9GocgayHM%2Fe4dunrPrhb%2BOsK39P2yoLYJprnJ8zhLNSqlPf9uJRoxZ4Weq8aTDnrrsxRTv690Rh0BuEw9mnhjxv%2BqTf5RhhIOacsVymva5apXh7eNsn8VyXu64pkKSBEjNjxkux5mV4Xy9nPdNWDUoxD15Ma6rJ3WmyopbnNWCK3W5itIokt5TR%2B9LSUVEr7bs32oFBLsb3ZKjrA88taQ9X%2Fa4whGX9hhqIMEsL99ozia%2BA89PS3zrqvFqmrsuid9SCxanrK8J0gPbVGFYCK7uCPZqsgLuTMsyRSAvZXoNYhhd8iXwjzqgMTsxOshQbs7O4hEZF9f%2FQXVsgLYRh2fxV2I1zDwL7MjMFpDEJVayNp1wGnbsvfUV5JucmiF2tPSZVXMoqpncL3ccp1T54KTQp49OeRXgeSsbv6Hl04Hz2wNjxH%2BgexLXWSrblq5pvDtW4w1UUCPPqE8MuEQD7lrjkQv%2FlI3txTWlQK7K3%2Bf50valFnAmqqRENVyHi2q1ettPN3NlyH7Dn7azFZzK0JIGfCbEufghjyc5O0ey61Im1EUOCAVbZdOhnlehyyXNeGZ2NDxfGCjRBVNJbwZZOacHuzF7ZnYsAaGjmSsE890%2BEV%2FQPACzpgPww5jdcDA8P3Kp24cCEdKWaz0rQfqbYnz43a7Qq93",
+  "pStore-_parsely_session": "{\"sid\":2,\"surl\":\"https://www.theatlantic.com/games/bracket-city/\",\"sref\":\"\",\"sts\":1772630255233,\"slts\":1772598029085}|^1772633057707",
+  "permutive-app": {
+    "eventPublication": {
+      "eventUpload": [
+        [
+          "PageviewComplete-0cdd379d-426f-464d-a805-1e75e4e96f34",
+          {
+            "event": {
+              "name": "PageviewComplete",
+              "time": "2026-03-04T13:34:14.937Z",
+              "properties": {
+                "isp_info": {
+                  "isp": "Adams Telephone",
+                  "organization": "Adams Telephone",
+                  "autonomous_system_number": 12033,
+                  "autonomous_system_organization": "Adams TelSystems, Inc."
+                },
+                "geo_info": {
+                  "continent": "North America",
+                  "country": "United States",
+                  "city": "Quincy",
+                  "province": "Illinois",
+                  "postal_code": "62305"
+                },
+                "classifications_watson": {
+                  "taxonomy_labels": []
+                },
+                "page_type": "unknown",
+                "language": "en-US",
+                "user": {
+                  "ad_blocker": false,
+                  "logged_in": false
+                },
+                "client": {
+                  "domain": "www.theatlantic.com",
+                  "referrer": "",
+                  "title": "Bracket City - The Atlantic",
+                  "type": "web",
+                  "url": "https://www.theatlantic.com/games/bracket-city",
+                  "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 PermutiveWebSDK/v20.63.1"
+                },
+                "contextual": {
+                  "classifications": {
+                    "categories": [
+                      {
+                        "value": "1_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "2_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "3_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "4_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "5_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "6_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "7_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "8_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "9_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "10_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "11_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "no_risk",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      }
+                    ],
+                    "keywords": [],
+                    "entities": [],
+                    "sentiment": [],
+                    "emotion": [],
+                    "concepts": []
+                  }
+                },
+                "aggregations": {
+                  "PageviewEngagement": {
+                    "engaged_time": 0
+                  },
+                  "SegmentEntry": [
+                    157479,
+                    165471,
+                    165690,
+                    165700
+                  ],
+                  "SegmentExit": [],
+                  "CohortEntry": [
+                    "157479",
+                    "165471",
+                    "165690",
+                    "165700"
+                  ],
+                  "CohortExit": []
+                }
+              },
+              "session_id": "c40b16a9-fb4a-46af-ace5-0f21d44fcef2",
+              "view_id": "0cdd379d-426f-464d-a805-1e75e4e96f34",
+              "segments": [
+                146762,
+                157479,
+                165471,
+                165690,
+                165700,
+                213558,
+                238841,
+                238842
+              ],
+              "user_id": "ddf6b8b7-8d68-4418-9f41-ea60184efd43",
+              "cohorts": [
+                "146762",
+                "157479",
+                "165471",
+                "165690",
+                "165700",
+                "213558",
+                "238841",
+                "238842",
+                "cqaa",
+                "cpzk",
+                "cqaq",
+                "cqam",
+                "cpzs",
+                "cqay",
+                "cpzw",
+                "cqau",
+                "cpzo",
+                "cqae",
+                "cpzg",
+                "cqai",
+                "cur"
+              ]
+            },
+            "requiresEnrichment": false,
+            "sdkProcessed": true
+          }
+        ]
+      ]
+    },
+    "core": {
+      "activations": {
+        "dfp": [],
+        "dfp_contextual": [
+          "cqaa",
+          "cpzk",
+          "cqaq",
+          "cqam",
+          "cpzs",
+          "cqay",
+          "cpzw",
+          "cqau",
+          "cpzo",
+          "cqae",
+          "cpzg",
+          "cqai"
+        ]
+      },
+      "cohorts": {
+        "all": [
+          "146762",
+          "157479",
+          "165471",
+          "165690",
+          "165700",
+          "213558",
+          "238841",
+          "238842",
+          "cqaa",
+          "cpzk",
+          "cqaq",
+          "cqam",
+          "cpzs",
+          "cqay",
+          "cpzw",
+          "cqau",
+          "cpzo",
+          "cqae",
+          "cpzg",
+          "cqai",
+          "cur"
+        ],
+        "ql": [
+          146762,
+          157479,
+          165471,
+          165690,
+          165700,
+          213558,
+          238841,
+          238842
+        ],
+        "qlCustom": [
+          146762,
+          157479,
+          165471,
+          165690,
+          165700,
+          213558,
+          238841,
+          238842
+        ],
+        "qlStandard": []
+      },
+      "stateMigrated": true
+    },
+    "metricContext": {
+      "session_count": {
+        "scope": "ddf6b8b7-8d68-4418-9f41-ea60184efd43",
+        "lastValue": "c40b16a9-fb4a-46af-ace5-0f21d44fcef2",
+        "count": 3
+      },
+      "session_init_count": {
+        "scope": "ddf6b8b7-8d68-4418-9f41-ea60184efd43,c40b16a9-fb4a-46af-ace5-0f21d44fcef2",
+        "lastValue": "0.5482788744103468",
+        "count": 1
+      },
+      "session_view_count": {
+        "scope": "ddf6b8b7-8d68-4418-9f41-ea60184efd43,c40b16a9-fb4a-46af-ace5-0f21d44fcef2",
+        "lastValue": "0cdd379d-426f-464d-a805-1e75e4e96f34",
+        "count": 1
+      }
+    },
+    "sdkql": {},
+    "strategicPartnerships": {},
+    "mediaAndEntertainment": {},
+    "advertisers": {}
+  },
+  "sa-user-id": "s%3A0-d1633736-1d73-5151-4cec-21ad49438b83.p1HYprqHlz7C7AKjdg6RWB33xhL%2FyL3sH2PqgW3i7AA",
+  "sa-user-id-v3": "s%3AAQAKIO-cVWY5e3IqVplw2Xo9FgDTBUlfwv-V4MJY5e0TStqtEAQYAyDY6aDNBjABOgTeftdOQgQPurZ6.JU%2FRIPfLTxdBbpggQuGUThKWxSqgtHnboVvM6aBqM0o",
+  "_sp_non_keyed_local_state": {
+    "gdpr": {
+      "_sp_v1_data": "1188293",
+      "_sp_v1_p": "592"
+    },
+    "custom": {
+      "_sp_v1_data": "1195073",
+      "_sp_v1_p": "448"
+    },
+    "usnat": {
+      "_sp_v1_data": "1214915",
+      "_sp_v1_p": "822"
+    }
+  },
+  "_ccmaid": 3659427993309675500,
+  "_lc2_fpi_meta": {
+    "w": 1772598000609
+  },
+  "_pssps": {
+    "cohorts": [
+      "cur"
+    ],
+    "ssps": [
+      "openx",
+      "pubmatic",
+      "appnexus",
+      "google_pps",
+      "ix",
+      "msft"
+    ]
+  },
+  "_chartbeat2": ".1772598028887.1772631256017.11.CMRvWQDOi3F_DO6U10DqD1GdB4EMNS.1",
+  "li_adsId": "a617107c-a54a-4f12-8be8-643ab40b535c",
+  "_cb_svref_expires": 1772633056095,
+  "__qca": {
+    "value": "P1-74abc067-1531-4363-ab0e-8e0715e933dd",
+    "expiry": 1806466830053
+  },
+  "_cb_expires": 1806759256027,
+  "_sharedID_cst": "kSylLAssaw==",
+  "permutive-id": "ddf6b8b7-8d68-4418-9f41-ea60184efd43",
+  "lytics_segments": [
+    "smt_new",
+    "csg_dap_audience_first_visit_last_30_days",
+    "casual_visitors_last_visit_past_60_days",
+    "all"
+  ],
+  "_chartbeat2_expires": 1806759256028,
+  "__tamLIResolveResult": "%7B%22bidswitch%22%3A%22643192e5-ec9a-4ea6-a668-a753bfd6817a%22%2C%22medianet%22%3A%224106184345784989000V10%22%2C%22nonId%22%3A%2226-tcWAEW5BMVw%2FIOseNukp2OEoTNBAz7TwH%2BGw1ry4a9IxRox9MK7jiG%2Bhp3BY%2Bf%2FSWwxfC53DRYwmVlofvEjD55RjcFC7GQNsRC5EaOdBLGjnYQ%3D%3D%22%2C%22sovrn%22%3A%223a63ff07c8ef3243693bc597%22%2C%22pubmatic%22%3A%2272B59DD1-6A6C-4C18-A679-03E95E2ABF8D%22%2C%22index%22%3A%22aYF1AdHM6wUAAVT1CI6RkwAA%265984%22%2C%22openx%22%3A%221ad0a15f-6ea3-4e12-816c-feb573bfc2cd%22%7D",
+  "sa-user-id-v2": "s%3A0WM3Nh1zUVFM7CGtSUOLg0LibkE.vY5xGVxWi%2FMTtUrTUR%2FVMwwzN7Kysp3ATtOMtOjIBTU",
+  "id5id_exp": "Fri, 03 Apr 2026 13:17:32 GMT",
+  "lastExternalReferrerTime": 1772631257276,
+  "_qcses_p-b0K-eQJGBXxXE": {
+    "lastEvent": 1772631257194,
+    "sid": "d1c27873-f73f-4483-8660-690283f723c3",
+    "engagementState": {
+      "eventsCount": 2
+    }
+  },
+  "lastExternalReferrer": "empty",
+  "permutive-consent": {
+    "opt_in": true,
+    "token": "CONSENT_GRANTED"
+  },
+  "id5id_cst": "BCxSLIksuA==",
+  "_pcrprs": [],
+  "_li_ss": "Ci4KBQgKEIgdCgYI3QEQiB0KBgiAAhCKHQoGCKIBEIgdCgYI0gEQiB0KBQh-EIgdEn8NynDx4xJ4CgYIygEQiB0KBgjkARCIHQoGCJMBEIYdCgYIyQEQiB0KBgj0ARCGHQoGCJQBEIYdCgYI5gEQiB0KBgjGARCHHQoGCMcBEIYdCgYIjAIQiB0KBgjIARCIHQoGCOUBEIgdCgYIxQEQiB0KBgj-ARCIHQoGCOgBEIgd",
+  "33acrossIdTp": "6AEGsdGjq0uL5W5dVhj+RUxvKDx/Kvetl1axkilNgl4=",
+  "_sharedID_last": "Wed, 04 Mar 2026 13:34:06 GMT"
+}

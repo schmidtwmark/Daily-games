@@ -1,0 +1,224 @@
+{
+  "raddle_2026-03-05": {
+    "name": "PALE → HOPPER",
+    "ladder": [
+      {
+        "id": 0,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 1,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 2,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 3,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 4,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 5,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 6,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 7,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 8,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 9,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 10,
+        "active": true,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 11,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      }
+    ],
+    "movingDown": true,
+    "showFullLadder": true,
+    "startTime": "2026-03-05T02:19:42.153Z",
+    "lastUpdated": "2026-03-05T02:34:29.215Z"
+  },
+  "raddle_2026-03-04": {
+    "name": "PAIN → THUMPER",
+    "ladder": [
+      {
+        "id": 0,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 1,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 2,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 3,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 4,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 5,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 6,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 7,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 8,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 9,
+        "active": true,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 10,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 11,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      },
+      {
+        "id": 12,
+        "active": false,
+        "status": "revealed",
+        "isRevealed": true,
+        "isClueShown": true,
+        "reveals": 0
+      }
+    ],
+    "movingDown": true,
+    "showFullLadder": true,
+    "startTime": "2026-03-04T15:42:27.317Z",
+    "lastUpdated": "2026-03-04T15:44:53.230Z"
+  },
+  "raddle_game_state_all": {
+    "2026-03-04": true,
+    "2026-03-05": true
+  }
+}

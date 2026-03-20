@@ -1,0 +1,618 @@
+{
+  "_cb_svref": "external",
+  "_sharedID_exp": "Sat, 04 Apr 2026 03:02:15 GMT",
+  "_pdfps": [
+    "165471",
+    "165690",
+    "165700",
+    "238841",
+    "238842"
+  ],
+  "_li_duid": "72b00449ccdb--01kjvh5yz1wxw4tcw7jrhs7q1g",
+  "amxId": "amx*3*ec0dd4e9-a41f-446e-b112-a2accdfc3c2a*a4bc9710ce96e6441747f41c208dc07f",
+  "33acrossIdTp": "7fPLSG1b+PCOp6NpoLheAZaLW02hjha6491pEt0SFNM=",
+  "_ccmsi": "1772679722453_6rfj6v1wf|1772679728457",
+  "permutive-data-queries": {
+    "event-source-id": "b41c3bf9-da0e-4647-b4f6-5674ab41007a"
+  },
+  "pStore-_parsely_visitor": "{\"id\":\"pid=b047b46f5acbd7654382190f9cbd387b\",\"session_count\":7,\"last_session_ts\":1772674677386}|^1806843737622",
+  "__tamLIResolveResult_cst": "BCxSLIksuA==",
+  "_psegs": [
+    146762,
+    157479,
+    165471,
+    165690,
+    165700,
+    213558,
+    238841,
+    238842
+  ],
+  "bracketCityAnnouncement_update-2025-4-7": "seen",
+  "_cb": "CsCivCCd7lUlDcz8jv",
+  "33acrossId_cst": "BCxSLIksuA==",
+  "_GESPSK-yahoo.com": [
+    "yahoo.com",
+    null,
+    1772638606884,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+      109
+    ]
+  ],
+  "_lc2_fpi": "72b00449ccdb--01kjvh5yz1wxw4tcw7jrhs7q1g",
+  "_sp_local_state": {
+    "usnat": {
+      "mmsCookies": [
+        "_sp_v1_ss=1:H4sIAAAAAAAAAItWqo5RKimOUbLKK83J0YlRSkVil4AlqmtrlWIBBrfP6SgAAAA%3D"
+      ],
+      "propertyId": 39864,
+      "messageId": 0
+    },
+    "custom": {
+      "mmsCookies": [
+        "_sp_v1_ss=1:H4sIAAAAAAAAAItWqo5RKimOUbLKK83J0YlRSkVil4AlqmtrlXTgyqKBjDwQw6A2FqfyWADYf5_yVwAAAA%3D%3D"
+      ],
+      "propertyId": 39864
+    },
+    "gdpr": {
+      "mmsCookies": [
+        "_sp_v1_ss=1:H4sIAAAAAAAAAItWqo5RKimOUbLKK83J0YlRSkVil4AlqmtrlXTgyqIxGPg0xpIsgWQVkS4i1eFkuZd6BsUCAAGI8pBzAQAA"
+      ],
+      "propertyId": 39864,
+      "messageId": 0
+    }
+  },
+  "33acrossId_last": "Thu, 05 Mar 2026 03:02:15 GMT",
+  "_sharedID": "d5db3547-d170-4fa4-9769-83c0c55768e0",
+  "permutive-session": {
+    "session_id": "28d46657-f36e-44d7-ab00-92b4dde121bf",
+    "last_updated": "2026-03-05T03:02:08.527Z",
+    "hasChanged": false
+  },
+  "_sp_user_consent_39864": {
+    "gdpr": {
+      "authId": null,
+      "uuid": "ac806126-1862-4d64-9a58-37d08f8e92b9",
+      "getMessageAlways": false,
+      "applies": false
+    },
+    "usnat": {
+      "authId": null,
+      "uuid": "4dc75b97-eee0-4d47-951c-cb32525e3bbe",
+      "applicableSections": [
+        7
+      ],
+      "applies": true,
+      "legislation": "usnat",
+      "categories": [
+        "648c9c48e17a3c7a82360c54"
+      ],
+      "dateCreated": "2026-03-04T04:13:30.307Z",
+      "expirationDate": "2027-03-04T04:13:30.307Z",
+      "consentStatus": {
+        "rejectedAny": false,
+        "consentedToAll": true,
+        "consentedToAny": false,
+        "granularStatus": {
+          "sellStatus": true,
+          "shareStatus": true,
+          "sensitiveDataStatus": false,
+          "gpcStatus": false
+        },
+        "hasConsentData": false,
+        "previousOptInAll": false
+      },
+      "consentStrings": [
+        {
+          "sectionId": 7,
+          "sectionName": "usnat",
+          "consentString": "BVQqAAAAAgA.QA"
+        }
+      ],
+      "userConsents": {
+        "applies": true,
+        "categories": [
+          {
+            "_id": "648c9c48e17a3c7a82360c54",
+            "systemId": 3,
+            "consented": true
+          }
+        ],
+        "vendors": [
+          {
+            "_id": "6425d7744f9aee6206619515",
+            "consented": true
+          }
+        ]
+      },
+      "actions": [],
+      "consentString": "DBABLA~BVQqAAAAAgA.QA"
+    },
+    "version": 1
+  },
+  "__tamLIResolveResult_exp": "Fri, 06 Mar 2026 03:02:15 GMT",
+  "id5id_last": "Thu, 05 Mar 2026 03:02:17 GMT",
+  "permutive-data-misc": {
+    "identities": {
+      "pxid": {
+        "value": "050b2183-13e9-4a08-9017-e02b0f3fe844",
+        "expiry": 1772766128529
+      }
+    },
+    "metricsEnabled": true
+  },
+  "id5id": "%7B%22signature%22%3A%22ID5_Ap92TF4cxfzHiI6mlwso7qQ8YjO7Lu-TD8kzBKRmvxc1TOfAu-7tLD8k0ozwLIIuiVXdFRiN2OEra6_yM7GRp6SoS4u-OKeIWWAT-zxsPYcSdw9RZJpvuCGRm22ZT1CI9DIxGjl6YStXDiUEuVDJExADSsOB1qoQ9Rihom9nZQwtK8WSMWw%22%2C%22created_at%22%3A%222026-03-04T13%3A17%3A32Z%22%2C%22id5_consent%22%3Atrue%2C%22original_uid%22%3A%22ID5*tFx5kyZyIhTQ4aXxvvYZWWeTYgHV7Nke9OTfYY0yN2j__2mo8jlaAAEBCmmoMOwAjtIT6ywY1gtinRSFvFxaFw%22%2C%22universal_uid%22%3A%22ID5*dvRsTlPEQrsJC_sKUvn9JRI999yVwSJPyBHaLPYFWYz__2mo8jlaAAEBCmmoMOwAjtIjX200VcVRZyJ7q3NPEw%22%2C%22link_type%22%3A1%2C%22cascade_needed%22%3Atrue%2C%22privacy%22%3A%7B%22jurisdiction%22%3A%22other%22%2C%22id5_consent%22%3Atrue%7D%2C%22ext%22%3A%7B%22linkType%22%3A1%2C%22pba%22%3A%225CFsA9l4m6XHlZq1H8Box4txyL%2B2AhX0yG22IS5FqzabGLHNFwRzj4vrCJW%2BhEsu6qFHYSfmqjFuDpsNuPljag%3D%3D%22%7D%2C%22cache_control%22%3A%7B%22max_age_sec%22%3A7200%7D%2C%22ids%22%3A%7B%22id5id%22%3A%7B%22eid%22%3A%7B%22source%22%3A%22id5-sync.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22ID5*dvRsTlPEQrsJC_sKUvn9JRI999yVwSJPyBHaLPYFWYz__2mo8jlaAAEBCmmoMOwAjtIjX200VcVRZyJ7q3NPEw%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22linkType%22%3A1%2C%22pba%22%3A%225CFsA9l4m6XHlZq1H8Box4txyL%2B2AhX0yG22IS5FqzabGLHNFwRzj4vrCJW%2BhEsu6qFHYSfmqjFuDpsNuPljag%3D%3D%22%7D%7D%5D%7D%7D%7D%2C%22tags%22%3A%7B%22id%22%3A%22y%22%7D%7D",
+  "33acrossId_exp": "Mon, 01 Jun 2026 03:02:15 GMT",
+  "PathforaPageView": {
+    "$": "42",
+    "@": "2027-03-05T03:02:19.497Z",
+    "PATHFORA": "1.2.20"
+  },
+  "permutive-prebid-rtd": {
+    "acBidders": [
+      "pubmatic",
+      "appnexus",
+      "openx",
+      "ix"
+    ]
+  },
+  "_GESPSK-id5-sync.com": [
+    "id5-sync.com",
+    null,
+    1772638606884,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+      109
+    ]
+  ],
+  "amxId_cst": "BCxSLIksuA==",
+  "pStore-_parsely_session": "{\"sid\":7,\"surl\":\"https://www.theatlantic.com/games/bracket-city/\",\"sref\":\"\",\"sts\":1772674677386,\"slts\":1772670903730}|^1772681537612",
+  "33acrossId": "v1.0010b00002cG8kQAAS.1051.OKHDvbt%2BziZNrw9fvkh1LXdlHOtVYhJXWGAuRA4Q4wv6Yc4Jv1PzSHUV1ePU4o6SGmDF5jSLYsTQpxF3j3YWp4RmEhc7tLGjBBIq%2FoUG33ktratSsaUPxdOHc%2FO8Le1yoTixjxJ%2Bpne37oIBcC42Rk6OWdiowrrJlKPxwkOakeJItYIAj9RPfgZdkdHdKXaOVfvXqUZolGgHVX42%2FWxdW3bHMwFr9kNB9QKVkDmZA775flNJljwNnJhsObjrFYZFbm6LWVxPnyecUjVmBFWGT9qg8wkKJXKZUAU60cuPfh5tZ3kjbI2RTHg2jlchJDemFtdRsOFDVVA9ojU2Eu54ErxS5y92QjNXUNi888Vetd3i3aZNFXPOKgsNOWFOO1dZnBhmvlkRSOnLy1aihXHPew9alzgZpZiSNmbkGXjP3WiDztBku38dF%2Bq7BoAWviKj35xFTBclmnCgHmvBvu9zOWCdRoR9mMeQLcQISrZp0ovAICjTsi6GGPGJr44cypfsOS3oUVgNjmOnRoVNIe2q69%2FlzvIuN0p0wzzIIRmWwvnnXacks3qppReyShAOlPjq4Qli%2BaUV%2F4DMnn%2B3WbjaqrAVaE0FqIHa7cYy%2Fll4r6qRIKvFqfQS7YqZEAYIDCzgrpryOIo7S6%2B%2Fk8NpQnFZmu7lM7Z1XZgUwVovOqA55joBSJ6gOUCcqWXSBAw0gzYuuXP9jII2GH%2BNJKXu4RzZTGIAfwCrDw3LgmDtV%2BD7m4jPMltekoFndeaYwrEbNfLuGhbnt0Lz5MESJ04xFSkCqaaVAtu80JTJdF2xFEmolLLYEVggYrkDLK5RxU8MoAXuE9L1umsOzmzq1i2FluTcRKX7FrBefTQSjV22APgBu9g5yMX0zZAjyUUM5xp1KMKN6M2yTdc0DQfh1M50ldoHie2T3SKEc3jidgxivl0fvk6vidgfP5No5WIMMSGpA2b5Ys%2Bn93ROHcKoWZ7QP9P%2BEh7%2FZm2fc%2F1j2N4nS5ja9j5Uw4BVuXa69ZshmeDJNadYNBJ7Rv0n9yDr3EiZ%2BhQCLqYni7qBpOH05nms0ewp5HJFcllF1o71fG8rmWFC6y9qV4aS2OPn9UgUhuQhLbfVdgJ4RA0HnRy%2F3P5gKm%2Bt0EGO3d4SxkwnGXVUzZiuFM9xzhCIIXuVDmmOUwY44LsSfvkhtje6S3raC984sTSZc9ibGhaRxnYP6uT6kvWyeFvU2oLeta4ul1%2FZ%2Bw4nMISQq88c2MPTrUbOWW5OtZKP6YPP9GleE9Sa93UemnVuv3amDi1MLja%2BRIrBAQnlaJ7wYmZnZ9zQYTZDW1jl5jx7OoJ%2BCvsEMp67SvmieoTOUeDg8YD%2FpKGzo4LH1e9tu9Jij4WlJId82U6ImnjV8BqfZ5Cu4Waywk5F9K8yhVNoScJw",
+  "tutorialSeen": true,
+  "permutive-app": {
+    "eventPublication": {
+      "eventUpload": [
+        [
+          "PageviewComplete-d0e778de-e4a2-4abe-bd76-631012e17fd3",
+          {
+            "event": {
+              "name": "PageviewComplete",
+              "time": "2026-03-05T03:02:09.322Z",
+              "properties": {
+                "isp_info": {
+                  "isp": "Adams Telephone",
+                  "organization": "Adams Telephone",
+                  "autonomous_system_number": 12033,
+                  "autonomous_system_organization": "ASN-AT-12033"
+                },
+                "geo_info": {
+                  "continent": "North America",
+                  "country": "United States",
+                  "city": "Quincy",
+                  "province": "Illinois",
+                  "postal_code": "62305"
+                },
+                "classifications_watson": {
+                  "taxonomy_labels": []
+                },
+                "page_type": "unknown",
+                "language": "en-US",
+                "user": {
+                  "ad_blocker": false,
+                  "logged_in": false
+                },
+                "client": {
+                  "domain": "www.theatlantic.com",
+                  "referrer": "",
+                  "title": "Bracket City - The Atlantic",
+                  "type": "web",
+                  "url": "https://www.theatlantic.com/games/bracket-city",
+                  "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 PermutiveWebSDK/v20.63.1"
+                },
+                "contextual": {
+                  "classifications": {
+                    "categories": [
+                      {
+                        "value": "1_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "2_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "3_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "4_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "5_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "6_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "7_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "8_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "9_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "10_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "11_0",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      },
+                      {
+                        "value": "no_risk",
+                        "confidence": null,
+                        "taxonomy": "pbs",
+                        "provider": "brand_safety_ai"
+                      }
+                    ],
+                    "keywords": [],
+                    "entities": [],
+                    "sentiment": [],
+                    "emotion": [],
+                    "concepts": []
+                  }
+                },
+                "aggregations": {
+                  "PageviewEngagement": {
+                    "engaged_time": 0
+                  },
+                  "SegmentEntry": [],
+                  "SegmentExit": [],
+                  "CohortEntry": [],
+                  "CohortExit": []
+                }
+              },
+              "session_id": "28d46657-f36e-44d7-ab00-92b4dde121bf",
+              "view_id": "d0e778de-e4a2-4abe-bd76-631012e17fd3",
+              "segments": [
+                146762,
+                157479,
+                165471,
+                165690,
+                165700,
+                213558,
+                238841,
+                238842
+              ],
+              "user_id": "ddf6b8b7-8d68-4418-9f41-ea60184efd43",
+              "cohorts": [
+                "146762",
+                "157479",
+                "165471",
+                "165690",
+                "165700",
+                "213558",
+                "238841",
+                "238842",
+                "cqaa",
+                "cpzk",
+                "cqaq",
+                "cqam",
+                "cpzs",
+                "cqay",
+                "cpzw",
+                "cqau",
+                "cpzo",
+                "cqae",
+                "cpzg",
+                "cqai",
+                "cur"
+              ]
+            },
+            "requiresEnrichment": false,
+            "sdkProcessed": true
+          }
+        ]
+      ]
+    },
+    "core": {
+      "activations": {
+        "dfp": [],
+        "dfp_contextual": [
+          "cqaa",
+          "cpzk",
+          "cqaq",
+          "cqam",
+          "cpzs",
+          "cqay",
+          "cpzw",
+          "cqau",
+          "cpzo",
+          "cqae",
+          "cpzg",
+          "cqai"
+        ]
+      },
+      "cohorts": {
+        "all": [
+          "146762",
+          "157479",
+          "165471",
+          "165690",
+          "165700",
+          "213558",
+          "238841",
+          "238842",
+          "cqaa",
+          "cpzk",
+          "cqaq",
+          "cqam",
+          "cpzs",
+          "cqay",
+          "cpzw",
+          "cqau",
+          "cpzo",
+          "cqae",
+          "cpzg",
+          "cqai",
+          "cur"
+        ],
+        "ql": [
+          146762,
+          157479,
+          165471,
+          165690,
+          165700,
+          213558,
+          238841,
+          238842
+        ],
+        "qlCustom": [
+          146762,
+          157479,
+          165471,
+          165690,
+          165700,
+          213558,
+          238841,
+          238842
+        ],
+        "qlStandard": []
+      },
+      "stateMigrated": true
+    },
+    "metricContext": {
+      "session_count": {
+        "scope": "ddf6b8b7-8d68-4418-9f41-ea60184efd43",
+        "lastValue": "28d46657-f36e-44d7-ab00-92b4dde121bf",
+        "count": 12
+      },
+      "session_init_count": {
+        "scope": "ddf6b8b7-8d68-4418-9f41-ea60184efd43,28d46657-f36e-44d7-ab00-92b4dde121bf",
+        "lastValue": "0.926633024611078",
+        "count": 17
+      },
+      "session_view_count": {
+        "scope": "ddf6b8b7-8d68-4418-9f41-ea60184efd43,28d46657-f36e-44d7-ab00-92b4dde121bf",
+        "lastValue": "d0e778de-e4a2-4abe-bd76-631012e17fd3",
+        "count": 17
+      }
+    },
+    "sdkql": {},
+    "strategicPartnerships": {},
+    "mediaAndEntertainment": {},
+    "advertisers": {}
+  },
+  "sa-user-id": "s%3A0-d1633736-1d73-5151-4cec-21ad49438b83.p1HYprqHlz7C7AKjdg6RWB33xhL%2FyL3sH2PqgW3i7AA",
+  "sa-user-id-v3": "s%3AAQAKIO-cVWY5e3IqVplw2Xo9FgDTBUlfwv-V4MJY5e0TStqtEAQYAyC45KPNBjABOgTeftdOQgSaTl6j.zhSUmmWw53Z109L0rGVRLTImOHrLKywNMon0%2F1mFBLU",
+  "_sp_non_keyed_local_state": {
+    "gdpr": {
+      "_sp_v1_data": "1188293",
+      "_sp_v1_p": "365"
+    },
+    "custom": {
+      "_sp_v1_data": "1195073",
+      "_sp_v1_p": "953"
+    },
+    "usnat": {
+      "_sp_v1_data": "1214915",
+      "_sp_v1_p": "563"
+    }
+  },
+  "_ccmaid": 3659427993309675500,
+  "bracketCityActiveStreak": 1,
+  "amxId_last": "Thu, 05 Mar 2026 02:37:23 GMT",
+  "_lc2_fpi_meta": {
+    "w": 1772598000609
+  },
+  "_pssps": {
+    "cohorts": [
+      "cur"
+    ],
+    "ssps": [
+      "openx",
+      "pubmatic",
+      "appnexus",
+      "google_pps",
+      "ix",
+      "msft"
+    ]
+  },
+  "bracketCityUserId": "d13c9207-b1af-4ba8-a643-f99fe142d830",
+  "bracketPuzzle_2026-03-04": {
+    "displayState": "Andrew Johnson delivers a d<mark class=\"solved\">run</mark>ken inaugural address",
+    "solvedExpressions": [
+      "the indiscreet do this with their mouths 🏃‍♂️",
+      "a compact one comes in a jewel case 💿",
+      "one in a collection of Crown treasures 🇬🇧",
+      "avian meal for the mistaken",
+      "Happy ➡️ ___ ⬅️ ticket",
+      "___-to-___ (now-discouraged CPR technique)",
+      "you might get a parking one if you don't feed the meter",
+      "male Doe 🦌",
+      "___ (a deer, a female deer)",
+      "like a gander or a stallion",
+      "private quarters within a public bathroom",
+      "word before back 🏈 or pounder 🍔"
+    ],
+    "totalKeystrokes": 59,
+    "minimumKeystrokes": 54,
+    "hintModeClues": [
+      "avian meal for the mistaken"
+    ],
+    "peekedClues": [
+      "Happy ➡️ ___ ⬅️ ticket",
+      "avian meal for the mistaken"
+    ],
+    "megaPeekedClues": [
+      "Happy ➡️ ___ ⬅️ ticket"
+    ],
+    "initialPuzzle": "Andrew [male [___ (a deer, a fe[like a gander or a [private [word before back 🏈 or pounder 🍔]s within a public bathroom]ion] deer)] 🦌]son delivers a d[the in[a compact one comes in a [one in a collection of [avian [Happy ➡️ ___ ⬅️ [you might get a parking one if you don't feed the meter]] for the mistaken]n treasures 🇬🇧] case 💿]reet do this with their [___-to-___ (now-discouraged CPR technique)]s 🏃‍♂️]ken inaugural address",
+    "puzzleDate": "2026-03-04",
+    "isComplete": true,
+    "completionStats": null,
+    "wrongGuesses": 1,
+    "wrongGuessList": [
+      "gem"
+    ],
+    "inputMode": "submit",
+    "solvedOnPubDate": true,
+    "emailSignup": {
+      "email": "",
+      "status": "idle",
+      "errorMessage": ""
+    },
+    "hasTrackedPuzzleStart": true
+  },
+  "amxId_exp": "Thu, 19 Mar 2026 02:37:23 GMT",
+  "_chartbeat2": ".1772598028887.1772679736590.11.VWqZG4tal3koNkaDPSCp03aeeI.1",
+  "li_adsId": "a617107c-a54a-4f12-8be8-643ab40b535c",
+  "_cb_svref_expires": 1772681536647,
+  "_GESPSK-permutive-secure-signal": [
+    "permutive-secure-signal",
+    "MWHhU5+HQySUlSkVtxcmF+OQwFQYgkiGb1ef1x8wz0rGf9N9NE2LYXGVLYxMK5ihKEUrQ/zNSrLgtmTDSBF94I9CRhE6bI8qBMOW2YVvzUiB2mhXXrIxYVBUpqI5rzrh0UJhzaHnFXK1MVmiVo67Bspn2Nh2y2HrLYDryDTTlKU=",
+    1772638606873
+  ],
+  "__qca": {
+    "value": "P1-74abc067-1531-4363-ab0e-8e0715e933dd",
+    "expiry": 1806466830053
+  },
+  "_cb_expires": 1806807736602,
+  "_sharedID_cst": "kSylLAssaw==",
+  "permutive-id": "ddf6b8b7-8d68-4418-9f41-ea60184efd43",
+  "_GESPSK-rtbhouse": [
+    "rtbhouse",
+    null,
+    1772638606884,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+      109
+    ]
+  ],
+  "lytics_segments": [
+    "smt_new",
+    "csg_dap_audience_first_visit_last_30_days",
+    "csg_dap_audience_highly_engaged_visitors_data_science_high_prop",
+    "csg_subscriber_lookalike_2024_prediction_6",
+    "csg_dap_audience_5_visits_last_30_days",
+    "all"
+  ],
+  "__tamLIResolveResult": "%7B%22bidswitch%22%3A%22643192e5-ec9a-4ea6-a668-a753bfd6817a%22%2C%22medianet%22%3A%224106184345784989000V10%22%2C%22nonId%22%3A%2226-tcWAEW5BMVw%2FIOseNukp2OEoTNBAz7TwH%2BGw1ry4a9IxRox9MK7jiG%2Bhp3BY%2Bf%2FSWwxfC53DRYwmVlofvEjD55RjcFC7GQNsRC5EaOdBLGjnYQ%3D%3D%22%2C%22sovrn%22%3A%223a63ff07c8ef3243693bc597%22%2C%22pubmatic%22%3A%2272B59DD1-6A6C-4C18-A679-03E95E2ABF8D%22%2C%22index%22%3A%22aYF1AdHM6wUAAVT1CI6RkwAA%265984%22%2C%22openx%22%3A%221ad0a15f-6ea3-4e12-816c-feb573bfc2cd%22%7D",
+  "lastExternalReferrer": "empty",
+  "id5id_exp": "Sat, 04 Apr 2026 03:02:17 GMT",
+  "sa-user-id-v2": "s%3A0WM3Nh1zUVFM7CGtSUOLg0LibkE.vY5xGVxWi%2FMTtUrTUR%2FVMwwzN7Kysp3ATtOMtOjIBTU",
+  "lastExternalReferrerTime": 1772679737999,
+  "_qcses_p-b0K-eQJGBXxXE": {
+    "lastEvent": 1772679737896,
+    "sid": "4577411f-f5ab-4f74-b080-13476665a6f6",
+    "engagementState": {
+      "eventsCount": 20
+    }
+  },
+  "arcspan_cohorts": "fN8LihpC,VuDijoMC,X6fqFL5W,k73z2EQp,FNeG46AW,59j73jUq,gJBRxkET,amfLVaSX,R8KyLkap",
+  "_GESPSK-esp.criteo.com": [
+    "esp.criteo.com",
+    null,
+    1772638606884,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+      109
+    ]
+  ],
+  "puzzle_completed_2026-03-04": true,
+  "id5id_cst": "BCxSLIksuA==",
+  "_GESPSK-openx": [
+    "openx",
+    null,
+    1772638606884,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+      109
+    ]
+  ],
+  "_pcrprs": [],
+  "bracketCityLongestStreak": 1,
+  "permutive-consent": {
+    "opt_in": true,
+    "token": "CONSENT_GRANTED"
+  },
+  "_li_ss": "CokBCgYI-QEQiB0KBQgKEIgdCgYI3QEQiB0KBgj4ARCJHQoGCIkBEIgdCgYIgQEQiB0KCQj_____BxCSHQoGCOMBEIkdCgYIpAEQiB0KBgizARCJHQoGCIACEIodCgYI4QEQiB0KBgiiARCIHQoGCP8BEIkdCgYI0gEQiB0KBQh-EIgdCgYIiAEQiR0SqAENynDx4xKgAQoGCMoBEIgdCgYI5AEQiB0KBgiTARCGHQoGCMkBEIgdCgYIpQEQiB0KBgj0ARCGHQoGCJQBEIYdCgYIzAEQix0KBgjGARCHHQoGCMcBEIYdCgYImgEQiR0KBgjnARCIHQoGCIwCEIgdCgYIyAEQiB0KBgjlARCIHQoGCMUBEIgdCgYIrAEQiR0KBgjmARCIHQoGCP4BEIgdCgYI6AEQiB0",
+  "_chartbeat2_expires": 1806807736603,
+  "arcspan2": "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",
+  "_sharedID_last": "Thu, 05 Mar 2026 03:02:15 GMT"
+}
