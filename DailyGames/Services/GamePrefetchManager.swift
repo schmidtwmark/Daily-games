@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 import WebKit
 
 enum PrefetchState: Equatable {
@@ -60,6 +61,22 @@ struct GameResultData: Equatable {
         self.maxStreak = json["maxStreak"] as? Int
         self.totalPlayed = json["totalPlayed"] as? Int
     }
+
+    /// Convert to GameData for persistence
+    func toGameData(gameId: String, isAvailable: Bool = true) -> GameData {
+        GameData(
+            gameId: gameId,
+            isAvailable: isAvailable,
+            isCompleted: true,
+            isWon: won,
+            guesses: guesses,
+            mistakes: mistakes,
+            streak: streak,
+            maxStreak: maxStreak,
+            totalPlayed: totalPlayed,
+            lastChecked: Date()
+        )
+    }
 }
 
 enum CompletionStatus: Equatable {
@@ -83,9 +100,18 @@ enum CompletionStatus: Equatable {
     }
 }
 
+/// Display status for games in the list view
+enum GameDisplayStatus: Equatable {
+    case loading
+    case unavailable       // Game doesn't exist for this date (grayed out)
+    case incomplete
+    case completed(GameResultData)
+    case unknown
+}
+
 @MainActor
 class GamePrefetchManager: ObservableObject {
-    @Published var completionStatus: [String: CompletionStatus] = [:]
+    @Published var displayStatus: [String: GameDisplayStatus] = [:]
     @Published var prefetchState: [String: PrefetchState] = [:]
 
     private var webViews: [String: WKWebView] = [:]
@@ -94,17 +120,19 @@ class GamePrefetchManager: ObservableObject {
     /// Tracks when each game was last fetched (date component only, not time)
     private var lastFetchDates: [String: Date] = [:]
 
+    private let modelContainer: ModelContainer
     private let debugDirectory: URL
     private let calendar = Calendar.current
 
-    init() {
+    init(modelContainer: ModelContainer) {
+        self.modelContainer = modelContainer
         let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         debugDirectory = docs.appendingPathComponent("Daily Games")
 
         print("📁 Debug directory: \(debugDirectory.path)")
 
         for game in Game.allCases {
-            completionStatus[game.id] = .unknown
+            displayStatus[game.id] = .unknown
             prefetchState[game.id] = .idle
         }
 
@@ -121,18 +149,79 @@ class GamePrefetchManager: ObservableObject {
         }
     }
 
-    /// Prefetch all games that haven't been fetched today
-    func prefetchAll() {
+    // MARK: - Database Operations
+
+    @MainActor
+    private func fetchOrCreateDay(for date: Date) -> GameDay {
+        let context = modelContainer.mainContext
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let dateString = formatter.string(from: date)
+
+        let predicate = #Predicate<GameDay> { $0.dateString == dateString }
+        let descriptor = FetchDescriptor(predicate: predicate)
+
+        if let existing = try? context.fetch(descriptor).first {
+            return existing
+        }
+
+        let newDay = GameDay(date: date)
+        context.insert(newDay)
+        try? context.save()
+        return newDay
+    }
+
+    @MainActor
+    private func updateGameData(game: Game, date: Date, data: GameData) {
+        let context = modelContainer.mainContext
+        let day = fetchOrCreateDay(for: date)
+        day.updateGame(game, with: data)
+        try? context.save()
+    }
+
+    // MARK: - Load and Refresh
+
+    /// Load cached records from SwiftData, update UI immediately, then prefetch all games
+    func loadAndRefreshAll() {
         let today = calendar.startOfDay(for: Date())
+
+        // Step 1: Load cached data from database and update UI immediately
+        let day = fetchOrCreateDay(for: today)
         for game in Game.allCases {
-            // Only prefetch if we haven't fetched today
+            if let gameData = day.gameData(for: game) {
+                if !gameData.isAvailable {
+                    displayStatus[game.id] = .unavailable
+                } else if gameData.isCompleted {
+                    let resultData = GameResultData(
+                        won: gameData.isWon,
+                        guesses: gameData.guesses,
+                        mistakes: gameData.mistakes,
+                        streak: gameData.streak,
+                        maxStreak: gameData.maxStreak,
+                        totalPlayed: gameData.totalPlayed
+                    )
+                    displayStatus[game.id] = .completed(resultData)
+                } else if gameData.lastChecked != nil {
+                    displayStatus[game.id] = .incomplete
+                }
+            }
+        }
+
+        // Step 2: Prefetch all games that haven't been fetched in this session
+        for game in Game.allCases {
+            // Skip if already fetched in this session
             if let lastFetch = lastFetchDates[game.id],
                calendar.isDate(lastFetch, inSameDayAs: today) {
-                print("📦 [\(game.name)] Using cached result from today")
+                print("📦 [\(game.name)] Already fetched this session")
                 continue
             }
-            prefetch(game: game, for: Date())
+            prefetch(game: game, for: today)
         }
+    }
+
+    /// Prefetch all games that haven't been fetched today
+    func prefetchAll() {
+        loadAndRefreshAll()
     }
 
     func prefetch(game: Game, for date: Date) {
@@ -205,8 +294,11 @@ class GamePrefetchManager: ObservableObject {
         return webView
     }
 
+    // MARK: - Completion Checking
+
     func checkCompletion(for game: Game) {
         guard let webView = webViews[game.id] else { return }
+        let date = currentDates[game.id] ?? Date()
 
         webView.evaluateJavaScript(game.completionScript) { [weak self] result, _ in
             guard let self = self else { return }
@@ -215,30 +307,80 @@ class GamePrefetchManager: ObservableObject {
                let data = jsonString.data(using: .utf8),
                let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
 
+                // Check for unavailable game
+                let available = json["available"] as? Bool ?? true
+                if !available {
+                    Task { @MainActor in
+                        self.displayStatus[game.id] = .unavailable
+                        let gameData = GameData(
+                            gameId: game.id,
+                            isAvailable: false,
+                            isCompleted: false,
+                            isWon: false,
+                            lastChecked: Date()
+                        )
+                        self.updateGameData(game: game, date: date, data: gameData)
+                    }
+                    return
+                }
+
                 let completed = json["completed"] as? Bool ?? false
 
                 Task { @MainActor in
                     if completed, let resultData = GameResultData(json: json) {
-                        self.completionStatus[game.id] = .completed(resultData)
+                        self.displayStatus[game.id] = .completed(resultData)
+                        let gameData = resultData.toGameData(gameId: game.id)
+                        self.updateGameData(game: game, date: date, data: gameData)
                     } else if completed {
                         // Fallback for scripts that don't return full data
                         let won = json["won"] as? Bool ?? false
-                        self.completionStatus[game.id] = .completed(GameResultData(won: won))
+                        let resultData = GameResultData(won: won)
+                        self.displayStatus[game.id] = .completed(resultData)
+                        let gameData = resultData.toGameData(gameId: game.id)
+                        self.updateGameData(game: game, date: date, data: gameData)
                     } else {
-                        self.completionStatus[game.id] = .incomplete
+                        self.displayStatus[game.id] = .incomplete
+                        let gameData = GameData(
+                            gameId: game.id,
+                            isAvailable: true,
+                            isCompleted: false,
+                            isWon: false,
+                            lastChecked: Date()
+                        )
+                        self.updateGameData(game: game, date: date, data: gameData)
                     }
                 }
             } else {
                 Task { @MainActor in
-                    self.completionStatus[game.id] = .unknown
+                    self.displayStatus[game.id] = .unknown
                 }
             }
         }
     }
 
-    /// Recheck completion status without reloading - called when returning from a game
-    func recheckCompletion(for game: Game) {
+    /// Called when user exits a game - checks completion and retries once if needed
+    func onGameExit(game: Game) {
+        print("🎮 [\(game.name)] Game exit - checking completion")
         checkCompletion(for: game)
+
+        // If not completed, retry after 2 seconds (in case completion state is delayed)
+        Task {
+            try? await Task.sleep(nanoseconds: 2_000_000_000) // 2 seconds
+            await MainActor.run {
+                if self.displayStatus[game.id] != .unavailable,
+                   case .completed = self.displayStatus[game.id] {
+                    print("🎮 [\(game.name)] Already completed, skipping recheck")
+                    return
+                }
+                print("🎮 [\(game.name)] Rechecking completion after 2s delay")
+                self.checkCompletion(for: game)
+            }
+        }
+    }
+
+    /// Recheck completion status without reloading - called when returning from a game (legacy)
+    func recheckCompletion(for game: Game) {
+        onGameExit(game: game)
     }
 
     func markLoaded(game: Game) {
@@ -256,6 +398,21 @@ class GamePrefetchManager: ObservableObject {
                 self.prefetchState[game.id] = .ready
             }
         }
+    }
+
+    func markUnavailable(game: Game) {
+        let date = currentDates[game.id] ?? Date()
+        displayStatus[game.id] = .unavailable
+        prefetchState[game.id] = .ready
+
+        let gameData = GameData(
+            gameId: game.id,
+            isAvailable: false,
+            isCompleted: false,
+            isWon: false,
+            lastChecked: Date()
+        )
+        updateGameData(game: game, date: date, data: gameData)
     }
 
     private func saveDebugData(for game: Game) {
@@ -355,6 +512,7 @@ private class PrefetchCoordinator: NSObject, WKNavigationDelegate {
     weak var manager: GamePrefetchManager?
     let game: Game
     private var loadStartTime: Date?
+    private var originalRequestURL: URL?
 
     init(manager: GamePrefetchManager, game: Game) {
         self.manager = manager
@@ -363,11 +521,29 @@ private class PrefetchCoordinator: NSObject, WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         loadStartTime = Date()
+        originalRequestURL = webView.url
         print("🔄 [\(game.name)] Started provisional navigation")
     }
 
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
-        print("↪️ [\(game.name)] Received redirect to: \(webView.url?.absoluteString ?? "unknown")")
+        let newURL = webView.url?.absoluteString ?? "unknown"
+        print("↪️ [\(game.name)] Received redirect to: \(newURL)")
+
+        // Detect if Big Crossword redirected away (unavailable)
+        if game.canBeUnavailable,
+           let original = originalRequestURL,
+           let current = webView.url {
+            let originalPath = original.path
+            let currentPath = current.path
+
+            // If we requested big crossword but got redirected to a different puzzle
+            if originalPath.contains("/crossword/big") && !currentPath.contains("/crossword/big") {
+                print("⚠️ [\(game.name)] Detected redirect away from Big Crossword - game unavailable")
+                Task { @MainActor in
+                    self.manager?.markUnavailable(game: self.game)
+                }
+            }
+        }
     }
 
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
@@ -401,6 +577,15 @@ private class PrefetchCoordinator: NSObject, WKNavigationDelegate {
         if let failingURL = nsError.userInfo[NSURLErrorFailingURLStringErrorKey] {
             print("❌ [\(game.name)] Failing URL: \(failingURL)")
         }
+
+        // Check if this is a 404 for an unavailable game
+        if game.canBeUnavailable && nsError.code == NSURLErrorResourceUnavailable {
+            Task { @MainActor in
+                self.manager?.markUnavailable(game: self.game)
+            }
+            return
+        }
+
         Task { @MainActor in
             manager?.markFailed(game: game)
         }
@@ -418,6 +603,13 @@ private class PrefetchCoordinator: NSObject, WKNavigationDelegate {
             let statusCode = httpResponse.statusCode
             if statusCode >= 400 {
                 print("⚠️ [\(game.name)] HTTP error: \(statusCode) for \(httpResponse.url?.absoluteString ?? "unknown")")
+
+                // Mark unavailable if 404 for games that can be unavailable
+                if statusCode == 404 && game.canBeUnavailable {
+                    Task { @MainActor in
+                        self.manager?.markUnavailable(game: self.game)
+                    }
+                }
             } else {
                 print("📡 [\(game.name)] HTTP \(statusCode) for \(httpResponse.url?.host ?? "unknown")")
             }

@@ -9,13 +9,15 @@ struct ContentView: View {
                 ForEach(Source.groupedGames, id: \.source) { section in
                     Section(section.source.displayName) {
                         ForEach(section.games) { game in
+                            let displayStatus = prefetchManager.displayStatus[game.id] ?? .unknown
                             NavigationLink(value: game) {
                                 GameRow(
                                     game: game,
-                                    completionStatus: prefetchManager.completionStatus[game.id] ?? .unknown,
+                                    displayStatus: displayStatus,
                                     prefetchState: prefetchManager.prefetchState[game.id] ?? .idle
                                 )
                             }
+                            .disabled(displayStatus == .unavailable)
                         }
                     }
                 }
@@ -34,7 +36,7 @@ struct ContentView: View {
                 }
             }
             .onAppear {
-                prefetchManager.prefetchAll()
+                prefetchManager.loadAndRefreshAll()
             }
         }
     }
@@ -42,14 +44,14 @@ struct ContentView: View {
 
 private struct GameRow: View {
     let game: Game
-    let completionStatus: CompletionStatus
+    let displayStatus: GameDisplayStatus
     let prefetchState: PrefetchState
 
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: game.systemImage)
                 .font(.title2)
-                .foregroundStyle(game.color)
+                .foregroundStyle(displayStatus == .unavailable ? .secondary : game.color)
                 .frame(width: 32)
 
             VStack(alignment: .leading, spacing: 2) {
@@ -67,6 +69,7 @@ private struct GameRow: View {
             statusIndicator
         }
         .padding(.vertical, 4)
+        .opacity(displayStatus == .unavailable ? 0.5 : 1.0)
     }
 
     @ViewBuilder
@@ -85,8 +88,20 @@ private struct GameRow: View {
                 .foregroundStyle(.red)
                 .font(.title3)
         } else {
-            // Ready state - show completion status
-            switch completionStatus {
+            // Ready state - show display status
+            switch displayStatus {
+            case .loading:
+                HStack(spacing: 6) {
+                    Text("Loading...")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    ProgressView()
+                        .scaleEffect(0.7)
+                }
+            case .unavailable:
+                Text("Not Available")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             case .completed(let data):
                 HStack(spacing: 6) {
                     if let detail = detailText(for: data) {

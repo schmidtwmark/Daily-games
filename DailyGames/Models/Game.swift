@@ -202,4 +202,14 @@ enum Game: String, CaseIterable, Identifiable, Hashable {
             return false
         }
     }
+
+    /// Whether this game can be unavailable on certain dates (e.g., Big Crossword is biweekly)
+    var canBeUnavailable: Bool {
+        switch self {
+        case .crosswordBig:
+            return true
+        default:
+            return false
+        }
+    }
 }

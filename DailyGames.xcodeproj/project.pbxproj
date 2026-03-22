@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B10000000000000000000001 /* DailyGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000001 /* DailyGamesApp.swift */; };
 		B10000000000000000000002 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000002 /* Game.swift */; };
+		B10000000000000000000009 /* GameDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000009 /* GameDay.swift */; };
 		B10000000000000000000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000003 /* ContentView.swift */; };
 		B10000000000000000000004 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000004 /* WebView.swift */; };
 		B10000000000000000000005 /* GamePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000005 /* GamePlayerView.swift */; };
@@ -16,6 +17,7 @@
 		B10000000000000000000007 /* GamePrefetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000008 /* GamePrefetchManager.swift */; };
 		B10000000000000000000010 /* CompletionScripts in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000010 /* CompletionScripts */; };
 		B10000000000000000000020 /* CompletionScriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000020 /* CompletionScriptTests.swift */; };
+		ED40C7502F6ECBA300CDB34C /* puzzle.icon in Resources */ = {isa = PBXBuildFile; fileRef = ED40C74F2F6ECBA300CDB34C /* puzzle.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,7 @@
 /* Begin PBXFileReference section */
 		A10000000000000000000001 /* DailyGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamesApp.swift; sourceTree = "<group>"; };
 		A10000000000000000000002 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		A10000000000000000000009 /* GameDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDay.swift; sourceTree = "<group>"; };
 		A10000000000000000000003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A10000000000000000000004 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		A10000000000000000000005 /* GamePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayerView.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		A10000000000000000000010 /* CompletionScripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CompletionScripts; sourceTree = "<group>"; };
 		A10000000000000000000020 /* CompletionScriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionScriptTests.swift; sourceTree = "<group>"; };
 		A10000000000000000000021 /* DailyGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED40C74F2F6ECBA300CDB34C /* puzzle.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = puzzle.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -156,18 +160,11 @@
 			path = DailyGames;
 			sourceTree = "<group>";
 		};
-		C10000000000000000000007 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A10000000000000000000010 /* CompletionScripts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		C10000000000000000000003 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000002 /* Game.swift */,
+				A10000000000000000000009 /* GameDay.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +194,15 @@
 				A10000000000000000000008 /* GamePrefetchManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000007 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED40C74F2F6ECBA300CDB34C /* puzzle.icon */,
+				A10000000000000000000010 /* CompletionScripts */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C10000000000000000000008 /* DailyGamesTests */ = {
@@ -291,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED40C7502F6ECBA300CDB34C /* puzzle.icon in Resources */,
 				B10000000000000000000006 /* Assets.xcassets in Resources */,
 				B10000000000000000000010 /* CompletionScripts in Resources */,
 			);
@@ -312,6 +319,7 @@
 			files = (
 				B10000000000000000000001 /* DailyGamesApp.swift in Sources */,
 				B10000000000000000000002 /* Game.swift in Sources */,
+				B10000000000000000000009 /* GameDay.swift in Sources */,
 				B10000000000000000000003 /* ContentView.swift in Sources */,
 				B10000000000000000000004 /* WebView.swift in Sources */,
 				B10000000000000000000005 /* GamePlayerView.swift in Sources */,
@@ -464,7 +472,7 @@
 		F10000000000000000000004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = puzzle;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -491,7 +499,7 @@
 		F10000000000000000000005 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = puzzle;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

@@ -4,6 +4,28 @@
         const text = document.body.innerText || '';
         const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD format
 
+        // Check for unavailable game (Big Crossword redirected or "No puzzle" message)
+        // This handles the case where Big Crossword was requested but we got redirected
+        const requestedBigCrossword = document.referrer && document.referrer.includes('/crossword/big');
+        const onBigCrossword = url.includes('/crossword/big');
+        const wasRedirected = requestedBigCrossword && !onBigCrossword;
+
+        // Also check for common "not available" indicators
+        const noPuzzleMessage = text.includes('No puzzle') ||
+                               text.includes('not available') ||
+                               text.includes('Puzzle not found');
+
+        if (wasRedirected || (url.includes('/crossword/big') && noPuzzleMessage)) {
+            return JSON.stringify({
+                available: false,
+                completed: false,
+                won: false,
+                streak: null,
+                maxStreak: null,
+                totalPlayed: null
+            });
+        }
+
         // Check streak data in localStorage
         const bootstrap = localStorage.getItem('puzzmoBootstrapData');
         if (bootstrap) {
@@ -25,6 +47,7 @@
                 const isCompleted = lastUpdated === today;
 
                 return JSON.stringify({
+                    available: true,
                     completed: isCompleted,
                     won: isCompleted,
                     streak: gameStreak.current || 0,
@@ -37,6 +60,7 @@
         // Fallback: check for "Puzzle Complete" text
         if (text.includes('Puzzle Complete')) {
             return JSON.stringify({
+                available: true,
                 completed: true,
                 won: true,
                 streak: null,
@@ -48,6 +72,7 @@
         console.error('Puzzmo completion detection error:', e);
     }
     return JSON.stringify({
+        available: true,
         completed: false,
         won: false,
         streak: null,

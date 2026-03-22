@@ -57,8 +57,8 @@ struct GamePlayerView: View {
             setupViewModel()
         }
         .onDisappear {
-            // Recheck completion when user returns from game
-            prefetchManager.recheckCompletion(for: game)
+            // Check completion when user exits game, with retry after 2s if needed
+            prefetchManager.onGameExit(game: game)
         }
     }
 

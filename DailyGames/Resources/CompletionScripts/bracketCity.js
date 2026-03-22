@@ -2,7 +2,7 @@
     try {
         const text = document.body.innerText || '';
 
-        if (text.includes('Completed')) {
+        if (text.includes('Completed') || text.includes('Finished')) {
             return JSON.stringify({ completed: true, won: true });
         }
     } catch(e) {
