@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var prefetchManager: GamePrefetchManager
     @Environment(\.scenePhase) private var scenePhase
+    @State private var debugGame: Game?
 
     private var todayFormatted: String {
         let formatter = DateFormatter()
@@ -25,6 +26,13 @@ struct ContentView: View {
                                 )
                             }
                             .disabled(displayStatus == .unavailable)
+                            .contextMenu {
+                                Button {
+                                    debugGame = game
+                                } label: {
+                                    Label("Debug Data", systemImage: "ladybug")
+                                }
+                            }
                         }
                     }
                 }
@@ -32,6 +40,17 @@ struct ContentView: View {
             .navigationTitle(todayFormatted)
             .navigationDestination(for: Game.self) { game in
                 GamePlayerView(game: game)
+            }
+            .sheet(item: $debugGame) { game in
+                NavigationStack {
+                    GameDebugView(game: game)
+                        .environmentObject(prefetchManager)
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Done") { debugGame = nil }
+                            }
+                        }
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -47,7 +66,6 @@ struct ContentView: View {
             }
             .onChange(of: scenePhase) { _, newPhase in
                 if newPhase == .active {
-                    // Check if it's a new day when app becomes active
                     prefetchManager.checkForNewDay()
                 }
             }
@@ -87,7 +105,6 @@ private struct GameRow: View {
 
     @ViewBuilder
     private var statusIndicator: some View {
-        // If still loading, show loading state
         if prefetchState.isLoading {
             HStack(spacing: 6) {
                 Text(prefetchState.statusText)
@@ -101,7 +118,6 @@ private struct GameRow: View {
                 .foregroundStyle(.red)
                 .font(.title3)
         } else {
-            // Ready state - show display status
             switch displayStatus {
             case .loading:
                 HStack(spacing: 6) {
@@ -154,6 +170,20 @@ private struct GameRow: View {
         if let mistakes = data.mistakes {
             return mistakes == 0 ? "Perfect!" : "\(mistakes) mistake\(mistakes == 1 ? "" : "s")"
         }
+        // Bracket City: show rating and errors
+        if let rating = data.rating {
+            if let errors = data.errors, errors > 0 {
+                return "\(rating) (\(errors) error\(errors == 1 ? "" : "s"))"
+            }
+            return rating
+        }
+        if let errors = data.errors {
+            return errors == 0 ? "Perfect!" : "\(errors) error\(errors == 1 ? "" : "s")"
+        }
+        // Raddle: show hint-free percentage
+        if let pct = data.hintFreePercent {
+            return "\(pct)% hint-free"
+        }
         // Puzzmo: show streak
         if let streak = data.streak, streak > 0 {
             return "🔥 \(streak)"
@@ -162,9 +192,6 @@ private struct GameRow: View {
     }
 
     private var streakText: String? {
-        // For incomplete Puzzmo games, still show streak if available
-        // This would require passing streak data even for incomplete games
-        // For now, return nil
         return nil
     }
 }

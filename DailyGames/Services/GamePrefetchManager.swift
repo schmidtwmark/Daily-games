@@ -42,14 +42,22 @@ struct GameResultData: Equatable {
     let streak: Int?
     let maxStreak: Int?
     let totalPlayed: Int?
+    // Bracket City-specific
+    let errors: Int?
+    let rating: String?
+    // Raddle-specific
+    let hintFreePercent: Int?
 
-    init(won: Bool, guesses: Int? = nil, mistakes: Int? = nil, streak: Int? = nil, maxStreak: Int? = nil, totalPlayed: Int? = nil) {
+    init(won: Bool, guesses: Int? = nil, mistakes: Int? = nil, streak: Int? = nil, maxStreak: Int? = nil, totalPlayed: Int? = nil, errors: Int? = nil, rating: String? = nil, hintFreePercent: Int? = nil) {
         self.won = won
         self.guesses = guesses
         self.mistakes = mistakes
         self.streak = streak
         self.maxStreak = maxStreak
         self.totalPlayed = totalPlayed
+        self.errors = errors
+        self.rating = rating
+        self.hintFreePercent = hintFreePercent
     }
 
     init?(json: [String: Any]) {
@@ -60,6 +68,9 @@ struct GameResultData: Equatable {
         self.streak = json["streak"] as? Int
         self.maxStreak = json["maxStreak"] as? Int
         self.totalPlayed = json["totalPlayed"] as? Int
+        self.errors = json["errors"] as? Int
+        self.rating = json["rating"] as? String
+        self.hintFreePercent = json["hintFreePercent"] as? Int
     }
 
     /// Convert to GameData for persistence
@@ -74,6 +85,9 @@ struct GameResultData: Equatable {
             streak: streak,
             maxStreak: maxStreak,
             totalPlayed: totalPlayed,
+            errors: errors,
+            rating: rating,
+            hintFreePercent: hintFreePercent,
             lastChecked: Date()
         )
     }
@@ -113,6 +127,7 @@ enum GameDisplayStatus: Equatable {
 class GamePrefetchManager: ObservableObject {
     @Published var displayStatus: [String: GameDisplayStatus] = [:]
     @Published var prefetchState: [String: PrefetchState] = [:]
+    let debugLogger = DebugLogger()
 
     private var webViews: [String: WKWebView] = [:]
     private var coordinators: [String: PrefetchCoordinator] = [:]
@@ -219,7 +234,10 @@ class GamePrefetchManager: ObservableObject {
                         mistakes: gameData.mistakes,
                         streak: gameData.streak,
                         maxStreak: gameData.maxStreak,
-                        totalPlayed: gameData.totalPlayed
+                        totalPlayed: gameData.totalPlayed,
+                        errors: gameData.errors,
+                        rating: gameData.rating,
+                        hintFreePercent: gameData.hintFreePercent
                     )
                     displayStatus[game.id] = .completed(resultData)
                 } else if gameData.lastChecked != nil {
@@ -236,7 +254,7 @@ class GamePrefetchManager: ObservableObject {
                 print("📦 [\(game.name)] Already fetched today")
                 continue
             }
-            prefetch(game: game, for: today)
+            prefetch(game: game, for: today, reason: "Refreshed on opening")
         }
     }
 
@@ -245,7 +263,7 @@ class GamePrefetchManager: ObservableObject {
         loadAndRefreshAll()
     }
 
-    func prefetch(game: Game, for date: Date) {
+    func prefetch(game: Game, for date: Date, reason: String = "Prefetch") {
         prefetchState[game.id] = .fetching
         currentDates[game.id] = date
         lastFetchDates[game.id] = calendar.startOfDay(for: date)
@@ -253,6 +271,13 @@ class GamePrefetchManager: ObservableObject {
         let webView = getOrCreateWebView(for: game)
         let url = game.url(for: date)
         print("🌐 [\(game.name)] Starting prefetch: \(url.absoluteString)")
+
+        debugLogger.log(game: game, entry: DebugLogEntry(
+            type: .request,
+            reason: reason,
+            summary: "Loading \(url.absoluteString)",
+            details: ["URL": url.absoluteString, "Date": "\(date)"]
+        ))
 
         let startTime = Date()
         webView.load(URLRequest(url: url))
@@ -290,7 +315,7 @@ class GamePrefetchManager: ObservableObject {
     func refreshAll() {
         for game in Game.allCases {
             let date = currentDates[game.id] ?? Date()
-            prefetch(game: game, for: date)
+            prefetch(game: game, for: date, reason: "Refresh button")
         }
     }
 
@@ -317,64 +342,104 @@ class GamePrefetchManager: ObservableObject {
 
     // MARK: - Completion Checking
 
-    func checkCompletion(for game: Game) {
-        guard let webView = webViews[game.id] else { return }
+    /// Evaluate the completion script and return parsed JSON (or nil)
+    private func evaluateCompletionScript(for game: Game) async -> [String: Any]? {
+        guard let webView = webViews[game.id] else { return nil }
+        return await withCheckedContinuation { continuation in
+            webView.evaluateJavaScript(game.completionScript) { result, _ in
+                if let jsonString = result as? String,
+                   let data = jsonString.data(using: .utf8),
+                   let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
+                    continuation.resume(returning: json)
+                } else {
+                    continuation.resume(returning: nil)
+                }
+            }
+        }
+    }
+
+    /// Get page content hash for change detection
+    private func getPageContentHash(for game: Game) async -> Int? {
+        guard let webView = webViews[game.id] else { return nil }
+        return await withCheckedContinuation { continuation in
+            webView.evaluateJavaScript("document.body.innerText") { result, _ in
+                if let text = result as? String {
+                    continuation.resume(returning: text.hashValue)
+                } else {
+                    continuation.resume(returning: nil)
+                }
+            }
+        }
+    }
+
+    /// Process a completion check result, update state + database, return whether completed
+    @discardableResult
+    private func processCompletionResult(game: Game, json: [String: Any]?, reason: String) -> Bool {
         let date = currentDates[game.id] ?? Date()
 
-        webView.evaluateJavaScript(game.completionScript) { [weak self] result, _ in
-            guard let self = self else { return }
+        guard let json = json else {
+            debugLogger.log(game: game, entry: DebugLogEntry(
+                type: .completionCheck,
+                reason: reason,
+                summary: "Script returned nil",
+                details: ["Result": "nil"]
+            ))
+            displayStatus[game.id] = .unknown
+            return false
+        }
 
-            if let jsonString = result as? String,
-               let data = jsonString.data(using: .utf8),
-               let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
+        let completed = json["completed"] as? Bool ?? false
+        let available = json["available"] as? Bool ?? true
 
-                // Check for unavailable game
-                let available = json["available"] as? Bool ?? true
-                if !available {
-                    Task { @MainActor in
-                        self.displayStatus[game.id] = .unavailable
-                        let gameData = GameData(
-                            gameId: game.id,
-                            isAvailable: false,
-                            isCompleted: false,
-                            isWon: false,
-                            lastChecked: Date()
-                        )
-                        self.updateGameData(game: game, date: date, data: gameData)
-                    }
-                    return
-                }
+        debugLogger.log(game: game, entry: DebugLogEntry(
+            type: .completionCheck,
+            reason: reason,
+            summary: completed ? "Completed" : (available ? "Incomplete" : "Unavailable"),
+            details: json.mapValues { "\($0)" }
+        ))
 
-                let completed = json["completed"] as? Bool ?? false
+        if !available {
+            displayStatus[game.id] = .unavailable
+            let gameData = GameData(
+                gameId: game.id,
+                isAvailable: false,
+                isCompleted: false,
+                isWon: false,
+                lastChecked: Date()
+            )
+            updateGameData(game: game, date: date, data: gameData)
+            return false
+        }
 
-                Task { @MainActor in
-                    if completed, let resultData = GameResultData(json: json) {
-                        self.displayStatus[game.id] = .completed(resultData)
-                        let gameData = resultData.toGameData(gameId: game.id)
-                        self.updateGameData(game: game, date: date, data: gameData)
-                    } else if completed {
-                        // Fallback for scripts that don't return full data
-                        let won = json["won"] as? Bool ?? false
-                        let resultData = GameResultData(won: won)
-                        self.displayStatus[game.id] = .completed(resultData)
-                        let gameData = resultData.toGameData(gameId: game.id)
-                        self.updateGameData(game: game, date: date, data: gameData)
-                    } else {
-                        self.displayStatus[game.id] = .incomplete
-                        let gameData = GameData(
-                            gameId: game.id,
-                            isAvailable: true,
-                            isCompleted: false,
-                            isWon: false,
-                            lastChecked: Date()
-                        )
-                        self.updateGameData(game: game, date: date, data: gameData)
-                    }
-                }
-            } else {
-                Task { @MainActor in
-                    self.displayStatus[game.id] = .unknown
-                }
+        if completed, let resultData = GameResultData(json: json) {
+            displayStatus[game.id] = .completed(resultData)
+            updateGameData(game: game, date: date, data: resultData.toGameData(gameId: game.id))
+            return true
+        } else if completed {
+            let won = json["won"] as? Bool ?? false
+            let resultData = GameResultData(won: won)
+            displayStatus[game.id] = .completed(resultData)
+            updateGameData(game: game, date: date, data: resultData.toGameData(gameId: game.id))
+            return true
+        } else {
+            displayStatus[game.id] = .incomplete
+            let gameData = GameData(
+                gameId: game.id,
+                isAvailable: true,
+                isCompleted: false,
+                isWon: false,
+                lastChecked: Date()
+            )
+            updateGameData(game: game, date: date, data: gameData)
+            return false
+        }
+    }
+
+    func checkCompletion(for game: Game) {
+        Task {
+            let json = await evaluateCompletionScript(for: game)
+            await MainActor.run {
+                processCompletionResult(game: game, json: json, reason: "Single check")
             }
         }
     }
@@ -382,24 +447,24 @@ class GamePrefetchManager: ObservableObject {
     /// Called when user exits a game - checks completion and retries once if needed
     func onGameExit(game: Game) {
         print("🎮 [\(game.name)] Game exit - checking completion")
+        debugLogger.log(game: game, entry: DebugLogEntry(
+            type: .stateChange, reason: "Game exit", summary: "User left game, checking completion"
+        ))
         checkCompletion(for: game)
 
-        // If not completed, retry after 2 seconds (in case completion state is delayed)
         Task {
-            try? await Task.sleep(nanoseconds: 2_000_000_000) // 2 seconds
+            try? await Task.sleep(nanoseconds: 2_000_000_000)
             await MainActor.run {
                 if self.displayStatus[game.id] != .unavailable,
                    case .completed = self.displayStatus[game.id] {
-                    print("🎮 [\(game.name)] Already completed, skipping recheck")
                     return
                 }
-                print("🎮 [\(game.name)] Rechecking completion after 2s delay")
                 self.checkCompletion(for: game)
             }
         }
     }
 
-    /// Recheck completion status without reloading - called when returning from a game (legacy)
+    /// Recheck completion status without reloading
     func recheckCompletion(for game: Game) {
         onGameExit(game: game)
     }
@@ -407,15 +472,70 @@ class GamePrefetchManager: ObservableObject {
     func markLoaded(game: Game) {
         prefetchState[game.id] = .waitingForJS
 
-        // Wait for JavaScript to fully render before checking completion
-        // Ribbit has a longer completion animation
-        let delaySeconds: UInt64 = game == .ribbit ? 8 : 3
+        debugLogger.log(game: game, entry: DebugLogEntry(
+            type: .response,
+            reason: "Page loaded",
+            summary: "WebView finished loading",
+            details: ["URL": webViews[game.id]?.url?.absoluteString ?? "unknown"]
+        ))
+
+        // Initial delay for JS rendering (Ribbit needs longer)
+        let initialDelay: UInt64 = game == .ribbit ? 5 : 1
         Task {
-            try? await Task.sleep(nanoseconds: delaySeconds * 1_000_000_000)
+            try? await Task.sleep(nanoseconds: initialDelay * 1_000_000_000)
             await MainActor.run {
                 self.prefetchState[game.id] = .checkingCompletion
-                saveDebugData(for: game)
-                checkCompletion(for: game)
+                self.saveDebugData(for: game)
+            }
+            // Poll once per second for up to 5 checks
+            var unchangedCount = 0
+            var lastHash: Int? = nil
+            let maxChecks = 5
+
+            for check in 1...maxChecks {
+                let json = await self.evaluateCompletionScript(for: game)
+                let currentHash = await self.getPageContentHash(for: game)
+
+                let completed = await MainActor.run {
+                    self.processCompletionResult(
+                        game: game,
+                        json: json,
+                        reason: "Polling check \(check)/\(maxChecks)"
+                    )
+                }
+
+                if completed {
+                    print("✅ [\(game.name)] Completed on check \(check)")
+                    break
+                }
+
+                // Track page content stability
+                if let hash = currentHash, hash == lastHash {
+                    unchangedCount += 1
+                } else {
+                    unchangedCount = 0
+                }
+                lastHash = currentHash
+
+                // If page hasn't changed for 3 consecutive checks, stop polling
+                if unchangedCount >= 2 {
+                    print("⏹ [\(game.name)] Page stable for 3 checks, marking incomplete")
+                    await MainActor.run {
+                        self.debugLogger.log(game: game, entry: DebugLogEntry(
+                            type: .stateChange,
+                            reason: "Early exit",
+                            summary: "Page unchanged for 3 consecutive checks, ending poll"
+                        ))
+                    }
+                    break
+                }
+
+                if check < maxChecks {
+                    try? await Task.sleep(nanoseconds: 1_000_000_000)
+                }
+            }
+
+            await MainActor.run {
                 self.prefetchState[game.id] = .ready
             }
         }
@@ -442,82 +562,75 @@ class GamePrefetchManager: ObservableObject {
             return
         }
 
-        print("📄 [\(game.name)] Saving debug data (after 3s delay)...")
+        print("📄 [\(game.name)] Saving debug data...")
 
-        // Create directory structure: Daily Games/Source/Game/
         let gameDir = debugDirectory
             .appendingPathComponent(game.source.displayName)
             .appendingPathComponent(game.name)
 
         do {
             try FileManager.default.createDirectory(at: gameDir, withIntermediateDirectories: true)
-            print("📄 [\(game.name)] Created directory: \(gameDir.path)")
         } catch {
             print("📄 [\(game.name)] Error creating directory: \(error)")
             return
         }
 
-        // Save full HTML
-        webView.evaluateJavaScript("document.documentElement.outerHTML") { [weak self] result, error in
-            if let error = error {
-                print("📄 [\(game.name)] Error getting HTML: \(error)")
-                return
+        let localStorageScript = """
+        (function() {
+            var data = {};
+            for (var i = 0; i < localStorage.length; i++) {
+                var key = localStorage.key(i);
+                try {
+                    var value = localStorage.getItem(key);
+                    try { data[key] = JSON.parse(value); } catch(e) { data[key] = value; }
+                } catch(e) { data[key] = "[Error reading value]"; }
             }
+            return JSON.stringify(data, null, 2);
+        })();
+        """
 
-            if let html = result as? String {
-                let htmlFile = gameDir.appendingPathComponent("page.html")
-                do {
-                    try html.write(to: htmlFile, atomically: true, encoding: .utf8)
-                    print("📄 [\(game.name)] Saved HTML (\(html.count) chars)")
-                } catch {
-                    print("📄 [\(game.name)] Error writing HTML: \(error)")
-                }
-            }
+        // Capture all three pieces of data, then log a single debug entry
+        webView.evaluateJavaScript("document.documentElement.outerHTML") { [weak self] htmlResult, _ in
+            guard let self = self else { return }
+            let html = htmlResult as? String
 
-            // Save body text
-            self?.webViews[game.id]?.evaluateJavaScript("document.body.innerText") { result, _ in
-                if let text = result as? String {
-                    let textFile = gameDir.appendingPathComponent("body.txt")
-                    try? text.write(to: textFile, atomically: true, encoding: .utf8)
-                    print("📄 [\(game.name)] Saved body text (\(text.count) chars)")
-                }
-            }
+            self.webViews[game.id]?.evaluateJavaScript("document.body.innerText") { bodyResult, _ in
+                let bodyText = bodyResult as? String
 
-            // Save localStorage as JSON
-            let localStorageScript = """
-            (function() {
-                var data = {};
-                for (var i = 0; i < localStorage.length; i++) {
-                    var key = localStorage.key(i);
-                    try {
-                        var value = localStorage.getItem(key);
-                        // Try to parse as JSON for better readability
-                        try {
-                            data[key] = JSON.parse(value);
-                        } catch(e) {
-                            data[key] = value;
-                        }
-                    } catch(e) {
-                        data[key] = "[Error reading value]";
+                self.webViews[game.id]?.evaluateJavaScript(localStorageScript) { storageResult, _ in
+                    let localStorage = storageResult as? String
+
+                    // Write to disk
+                    if let html = html {
+                        try? html.write(to: gameDir.appendingPathComponent("page.html"), atomically: true, encoding: .utf8)
                     }
-                }
-                return JSON.stringify(data, null, 2);
-            })();
-            """
+                    if let bodyText = bodyText {
+                        try? bodyText.write(to: gameDir.appendingPathComponent("body.txt"), atomically: true, encoding: .utf8)
+                    }
+                    if let localStorage = localStorage {
+                        try? localStorage.write(to: gameDir.appendingPathComponent("localStorage.json"), atomically: true, encoding: .utf8)
+                    }
 
-            self?.webViews[game.id]?.evaluateJavaScript(localStorageScript) { result, error in
-                if let error = error {
-                    print("📄 [\(game.name)] Error getting localStorage: \(error)")
-                    return
-                }
+                    // Log to debug logger with all captured data
+                    Task { @MainActor in
+                        var details: [String: String] = [:]
+                        details["URL"] = self.webViews[game.id]?.url?.absoluteString ?? "unknown"
+                        if let html = html {
+                            details["HTML"] = html
+                        }
+                        if let bodyText = bodyText {
+                            details["Body Text"] = bodyText
+                        }
+                        if let localStorage = localStorage {
+                            details["localStorage"] = localStorage
+                        }
 
-                if let jsonString = result as? String {
-                    let storageFile = gameDir.appendingPathComponent("localStorage.json")
-                    do {
-                        try jsonString.write(to: storageFile, atomically: true, encoding: .utf8)
-                        print("📄 [\(game.name)] Saved localStorage (\(jsonString.count) chars)")
-                    } catch {
-                        print("📄 [\(game.name)] Error writing localStorage: \(error)")
+                        self.debugLogger.log(game: game, entry: DebugLogEntry(
+                            type: .debugCapture,
+                            reason: "Page snapshot",
+                            summary: "Captured HTML (\(html?.count ?? 0) chars), body (\(bodyText?.count ?? 0) chars), localStorage",
+                            details: details
+                        ))
                     }
                 }
             }
@@ -526,6 +639,9 @@ class GamePrefetchManager: ObservableObject {
 
     func markFailed(game: Game) {
         prefetchState[game.id] = .failed
+        debugLogger.log(game: game, entry: DebugLogEntry(
+            type: .stateChange, reason: "Load failed", summary: "WebView navigation failed"
+        ))
     }
 }
 
@@ -622,10 +738,19 @@ private class PrefetchCoordinator: NSObject, WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         if let httpResponse = navigationResponse.response as? HTTPURLResponse {
             let statusCode = httpResponse.statusCode
-            if statusCode >= 400 {
-                print("⚠️ [\(game.name)] HTTP error: \(statusCode) for \(httpResponse.url?.absoluteString ?? "unknown")")
+            let url = httpResponse.url?.absoluteString ?? "unknown"
 
-                // Mark unavailable if 404 for games that can be unavailable
+            Task { @MainActor in
+                self.manager?.debugLogger.log(game: self.game, entry: DebugLogEntry(
+                    type: .response,
+                    reason: "HTTP response",
+                    summary: "HTTP \(statusCode) from \(httpResponse.url?.host ?? "unknown")",
+                    details: ["Status": "\(statusCode)", "URL": url]
+                ))
+            }
+
+            if statusCode >= 400 {
+                print("⚠️ [\(game.name)] HTTP error: \(statusCode) for \(url)")
                 if statusCode == 404 && game.canBeUnavailable {
                     Task { @MainActor in
                         self.manager?.markUnavailable(game: self.game)

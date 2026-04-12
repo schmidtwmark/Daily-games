@@ -79,7 +79,7 @@ struct GamePlayerView: View {
 
     private func loadGame(for date: Date) {
         selectedDate = date
-        prefetchManager.prefetch(game: game, for: date)
+        prefetchManager.prefetch(game: game, for: date, reason: "Date picker")
     }
 }
 

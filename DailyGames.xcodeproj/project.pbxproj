@@ -15,6 +15,8 @@
 		B10000000000000000000005 /* GamePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000005 /* GamePlayerView.swift */; };
 		B10000000000000000000006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000006 /* Assets.xcassets */; };
 		B10000000000000000000007 /* GamePrefetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000008 /* GamePrefetchManager.swift */; };
+		B10000000000000000000030 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000030 /* DebugLog.swift */; };
+		B10000000000000000000031 /* GameDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000031 /* GameDebugView.swift */; };
 		B10000000000000000000010 /* CompletionScripts in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000010 /* CompletionScripts */; };
 		B10000000000000000000020 /* CompletionScriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000020 /* CompletionScriptTests.swift */; };
 		ED40C7502F6ECBA300CDB34C /* puzzle.icon in Resources */ = {isa = PBXBuildFile; fileRef = ED40C74F2F6ECBA300CDB34C /* puzzle.icon */; };
@@ -40,6 +42,8 @@
 		A10000000000000000000006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10000000000000000000007 /* DailyGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10000000000000000000008 /* GamePrefetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePrefetchManager.swift; sourceTree = "<group>"; };
+		A10000000000000000000030 /* DebugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
+		A10000000000000000000031 /* GameDebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDebugView.swift; sourceTree = "<group>"; };
 		A10000000000000000000010 /* CompletionScripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CompletionScripts; sourceTree = "<group>"; };
 		A10000000000000000000020 /* CompletionScriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionScriptTests.swift; sourceTree = "<group>"; };
 		A10000000000000000000021 /* DailyGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +169,7 @@
 			children = (
 				A10000000000000000000002 /* Game.swift */,
 				A10000000000000000000009 /* GameDay.swift */,
+				A10000000000000000000030 /* DebugLog.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				A10000000000000000000003 /* ContentView.swift */,
 				A10000000000000000000004 /* WebView.swift */,
 				A10000000000000000000005 /* GamePlayerView.swift */,
+				A10000000000000000000031 /* GameDebugView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,6 +330,8 @@
 				B10000000000000000000004 /* WebView.swift in Sources */,
 				B10000000000000000000005 /* GamePlayerView.swift in Sources */,
 				B10000000000000000000007 /* GamePrefetchManager.swift in Sources */,
+				B10000000000000000000030 /* DebugLog.swift in Sources */,
+				B10000000000000000000031 /* GameDebugView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,9 @@ struct GameData: Codable, Equatable {
     var streak: Int?                // Puzzmo-specific
     var maxStreak: Int?
     var totalPlayed: Int?
+    var errors: Int?                // Bracket City-specific
+    var rating: String?             // Bracket City-specific
+    var hintFreePercent: Int?       // Raddle-specific
     var lastChecked: Date?
 }
 
