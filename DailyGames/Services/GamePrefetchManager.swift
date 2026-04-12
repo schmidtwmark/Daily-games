@@ -119,6 +119,8 @@ class GamePrefetchManager: ObservableObject {
     private var currentDates: [String: Date] = [:]
     /// Tracks when each game was last fetched (date component only, not time)
     private var lastFetchDates: [String: Date] = [:]
+    /// Tracks the date when we last loaded/refreshed
+    private var lastLoadDate: Date?
 
     private let modelContainer: ModelContainer
     private let debugDirectory: URL
@@ -181,9 +183,28 @@ class GamePrefetchManager: ObservableObject {
 
     // MARK: - Load and Refresh
 
+    /// Check if it's a new day since last load and refresh if so
+    func checkForNewDay() {
+        let today = calendar.startOfDay(for: Date())
+
+        // If we've never loaded, or if the day has changed, do a full refresh
+        if lastLoadDate == nil || !calendar.isDate(lastLoadDate!, inSameDayAs: today) {
+            print("📅 New day detected, refreshing all games")
+            // Clear the in-memory fetch dates so everything gets refreshed
+            lastFetchDates.removeAll()
+            // Reset display status to unknown
+            for game in Game.allCases {
+                displayStatus[game.id] = .unknown
+                prefetchState[game.id] = .idle
+            }
+            loadAndRefreshAll()
+        }
+    }
+
     /// Load cached records from SwiftData, update UI immediately, then prefetch all games
     func loadAndRefreshAll() {
         let today = calendar.startOfDay(for: Date())
+        lastLoadDate = today
 
         // Step 1: Load cached data from database and update UI immediately
         let day = fetchOrCreateDay(for: today)
@@ -207,12 +228,12 @@ class GamePrefetchManager: ObservableObject {
             }
         }
 
-        // Step 2: Prefetch all games that haven't been fetched in this session
+        // Step 2: Prefetch all games that haven't been fetched today
         for game in Game.allCases {
-            // Skip if already fetched in this session
+            // Skip if already fetched today
             if let lastFetch = lastFetchDates[game.id],
                calendar.isDate(lastFetch, inSameDayAs: today) {
-                print("📦 [\(game.name)] Already fetched this session")
+                print("📦 [\(game.name)] Already fetched today")
                 continue
             }
             prefetch(game: game, for: today)

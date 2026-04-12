@@ -2,6 +2,13 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject private var prefetchManager: GamePrefetchManager
+    @Environment(\.scenePhase) private var scenePhase
+
+    private var todayFormatted: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMM d"
+        return formatter.string(from: Date())
+    }
 
     var body: some View {
         NavigationStack {
@@ -22,7 +29,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("Daily Games")
+            .navigationTitle(todayFormatted)
             .navigationDestination(for: Game.self) { game in
                 GamePlayerView(game: game)
             }
@@ -37,6 +44,12 @@ struct ContentView: View {
             }
             .onAppear {
                 prefetchManager.loadAndRefreshAll()
+            }
+            .onChange(of: scenePhase) { _, newPhase in
+                if newPhase == .active {
+                    // Check if it's a new day when app becomes active
+                    prefetchManager.checkForNewDay()
+                }
             }
         }
     }
